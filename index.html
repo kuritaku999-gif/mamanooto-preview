@@ -46,6 +46,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 
 <link rel='stylesheet' id='mamanooto-fonts-css' href='https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&#038;display=swap' media='all' />
 <link rel='stylesheet' id='mamanooto-style-css' href='wp-content/themes/mamanooto/style.css' media='all' />
+<link rel='stylesheet' id='mamanooto-photo-css' href='wp-content/themes/mamanooto/assets/css/photo.css' media='all' />
 <link rel='stylesheet' id='mamanooto-guide-css' href='wp-content/themes/mamanooto/assets/css/navigator.css' media='all' />
 <link rel="https://api.w.org/" href="wp-json/index.html" /><link rel="alternate" title="JSON" type="application/json" href="wp-json/wp/v2/pages/18/index.html" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc.php" />
 <meta name="generator" content="WordPress 7.1" />
@@ -94,139 +95,178 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 	</div>
 </header>
 
-<!-- ヒーロー -->
-<section class="mno-hero" id="hero">
-	<div class="mno-hero-in">
-		<div class="mno-hero-copy">
-						<div class="mno-count-badge">
-				<img src="wp-content/themes/mamanooto/assets/img/sub_heart.png" alt="">
-								<span class="unit">オープン記念の特別価格で募集中♪</span>
-							</div>
+<!-- ヒーロー（全面写真） -->
+<section class="mnp-hero" id="hero">
+	<div class="mnp-hero-photo">
+		<img src="wp-content/themes/mamanooto/assets/img/photos/hero.webp" alt="ママたちが赤ちゃんと一緒に笑い合っている様子" fetchpriority="high">
+	</div>
+	<div class="mnp-hero-in">
+		<div class="mnp-hero-copy">
+						<div class="mnp-badge">
+								オープン記念の特別価格で募集中♪							</div>
 			<h1><span class="ln">正解なんて、なくていい。</span><span class="ln">変わっていく私を、</span><span class="ln">まるごと楽しもう。</span></h1>
 			<p class="sub">ママの「やってみたい」と「好き」がつながる<br />
 オンラインコミュニティ「ままのおと。」</p>
-			<div class="mno-hero-words">
-				<span>学ぶ。</span><span>繋がる。</span><span>楽しむ。</span><span>挑戦する。</span>
+			<div class="mnp-hero-cta">
+				<a class="mno-btn big" href="join/index.html">会員登録（月々1,980円〜）</a>
+				<a class="mnp-btn-line" href="#about">ままのおと。をのぞいてみる</a>
 			</div>
-			<p class="mno-hero-poem">いろんな人の「心の音」が重なって、<br>ひとりではできなかったことが、みんなでできるようになる。</p>
-			<div class="mno-hero-cta">
-				<a class="mno-btn big" href="join/index.html">
-					<img src="wp-content/themes/mamanooto/assets/img/sub_flower_w.png" alt="" style="width:22px;height:22px;">会員登録（月々1,980円〜）
-				</a>
-				<a class="mno-btn ghost" href="#about">ままのおと。とは？</a>
-			</div>
-			<p class="mno-hero-teacher">講師として参加したい方は <a href="join-teacher/index.html">こちら</a></p>
+			<p class="mnp-hero-teacher">講師として参加したい方は <a href="join-teacher/index.html">こちら</a></p>
 		</div>
-		<div class="mno-hero-visual">
-			<img class="deco d1 anim-drift" src="wp-content/themes/mamanooto/assets/img/sub_flower_p.png" alt="">
-			<img class="deco d2 anim-drift anim-delay-1" src="wp-content/themes/mamanooto/assets/img/sub_note.png" alt="">
-			<img class="deco d3 anim-drift anim-delay-2" src="wp-content/themes/mamanooto/assets/img/sub_heart.png" alt="">
-			<img class="deco d4 anim-drift anim-delay-3" src="wp-content/themes/mamanooto/assets/img/sub_star.png" alt="">
-			<img class="main-char anim-bob" src="wp-content/themes/mamanooto/assets/img/mama_baby.png" alt="ママと赤ちゃん">
+	</div>
+	<a class="mnp-scroll" href="#marquee" aria-label="下へ">scroll</a>
+</section>
+
+<!-- 写真が流れる帯 -->
+<section class="mnp-marquee" id="marquee" aria-label="ままのおと。の風景">
+	<div class="mnp-marquee-track">
+				<figure class="mnp-polaroid">
+			<img src="wp-content/themes/mamanooto/assets/img/photos/tea.webp" alt="オンラインお茶会" loading="lazy">
+			<figcaption>オンラインお茶会</figcaption>
+		</figure>
+				<figure class="mnp-polaroid">
+			<img src="wp-content/themes/mamanooto/assets/img/photos/nutrition.webp" alt="栄養の講座" loading="lazy">
+			<figcaption>栄養の講座</figcaption>
+		</figure>
+				<figure class="mnp-polaroid">
+			<img src="wp-content/themes/mamanooto/assets/img/photos/yoga.webp" alt="ママとベビーのヨガ" loading="lazy">
+			<figcaption>ママとベビーのヨガ</figcaption>
+		</figure>
+				<figure class="mnp-polaroid">
+			<img src="wp-content/themes/mamanooto/assets/img/photos/study.webp" alt="新しいことを学ぶ" loading="lazy">
+			<figcaption>新しいことを学ぶ</figcaption>
+		</figure>
+				<figure class="mnp-polaroid">
+			<img src="wp-content/themes/mamanooto/assets/img/photos/kids.webp" alt="子どもと一緒に" loading="lazy">
+			<figcaption>子どもと一緒に</figcaption>
+		</figure>
+				<figure class="mnp-polaroid">
+			<img src="wp-content/themes/mamanooto/assets/img/photos/craft.webp" alt="手づくり体験" loading="lazy">
+			<figcaption>手づくり体験</figcaption>
+		</figure>
+				<figure class="mnp-polaroid">
+			<img src="wp-content/themes/mamanooto/assets/img/photos/online.webp" alt="おうちから参加" loading="lazy">
+			<figcaption>おうちから参加</figcaption>
+		</figure>
+				<figure class="mnp-polaroid">
+			<img src="wp-content/themes/mamanooto/assets/img/photos/cooking.webp" alt="みんなでごはん" loading="lazy">
+			<figcaption>みんなでごはん</figcaption>
+		</figure>
+			</div>
+</section>
+
+<!-- こんな気持ち、ありませんか？ -->
+<section class="mnp-section" id="worries">
+	<div class="mnp-inner mnp-split">
+		<div class="mnp-split-photo mno-anim">
+			<img src="wp-content/themes/mamanooto/assets/img/photos/talk.webp" alt="ママ同士が向かい合って話している様子" loading="lazy">
+		</div>
+		<div class="mnp-split-text mno-anim">
+			<p class="mnp-eyebrow">こんな気持ち、ありませんか？</p>
+			<ul class="mnp-worries">
+				<li>毎日だれかのために頑張っていて、<b>自分のことはいつも後回し</b></li>
+				<li>子どものこと、自分のこと。<b>気軽に話せる相手がほしい</b></li>
+				<li>何か始めたいけれど、<b>何からやればいいかわからない</b></li>
+				<li>いろいろ学んでみたけれど、<b>ひとりでは続かなかった</b></li>
+			</ul>
+			<p class="mnp-answer">そんなママのための、<br><span>「ひとりにしない」</span>コミュニティです。</p>
 		</div>
 	</div>
 </section>
 
 <!-- ままのおと。とは？ -->
-<section class="mno-section alt" id="about">
-	<div class="mno-inner">
-		<div class="mno-sec-head"><img src="wp-content/themes/mamanooto/assets/img/sub_flower_p.png" alt="" class="sec-icon"><h2><span class="en">About</span>ままのおと。とは？</h2></div>		<p class="mno-concept-copy mno-anim">ママが「ママ」である前に、<br>一人の人として自分らしくいられる場所。</p>
-		<div class="mno-card mno-anim">
-			<div class="mno-about-wrap">
-				<img class="char anim-sway mno-anim char-pop" src="wp-content/themes/mamanooto/assets/img/tomomi_basic.png" alt="ともみさん">
-				<p class="mno-about-text">子どものこと。家族のこと。仕事のこと。
-毎日誰かのために頑張る中で、いつの間にか自分のことを後回しにしてしまう。
-
-でも、学んでもいい。遊んでもいい。挑戦してもいい。
-何かを始めてもいい。途中でやめてもいい。変わってもいい。
-
-そのままの自分でいられる場所があれば、人はもっと自分らしくなれる。
+<section class="mnp-section mnp-cream" id="about">
+	<div class="mnp-inner mnp-split reverse">
+		<div class="mnp-split-photo mno-anim">
+			<img src="wp-content/themes/mamanooto/assets/img/photos/circle.webp" alt="ママたちが輪になって話している様子" loading="lazy">
+			<img class="mnp-accent-char anim-sway" src="wp-content/themes/mamanooto/assets/img/tomomi_basic.png" alt="">
+		</div>
+		<div class="mnp-split-text mno-anim">
+			<p class="mnp-eyebrow">About</p>
+			<h2 class="mnp-h2">ママである前に、<br>一人の人として<br>自分らしくいられる場所。</h2>
+			<p class="mnp-body">子どものこと。家族のこと。仕事のこと。<br />
+毎日誰かのために頑張る中で、いつの間にか自分のことを後回しにしてしまう。<br />
+<br />
+でも、学んでもいい。遊んでもいい。挑戦してもいい。<br />
+何かを始めてもいい。途中でやめてもいい。変わってもいい。<br />
+<br />
+そのままの自分でいられる場所があれば、人はもっと自分らしくなれる。<br />
 それが「ままのおと。」の出発点です。</p>
-			</div>
 		</div>
 	</div>
 </section>
 
-<!-- 私たちが大切にすること -->
-<section class="mno-section" id="values">
-	<div class="mno-inner">
-		<div class="mno-sec-head"><img src="wp-content/themes/mamanooto/assets/img/sub_heart.png" alt="" class="sec-icon"><h2><span class="en">Our Values</span>私たちが大切にすること</h2></div>		<div class="mno-keywords4 mno-stagger">
-			<div class="mno-keyword-card mno-anim">
-				<img class="anim-sway" src="wp-content/themes/mamanooto/assets/img/circle_mama.png" alt="">
-				<div class="t">そのまま</div>
+<!-- 大切にすること（写真カード4枚） -->
+<section class="mnp-section" id="values">
+	<div class="mnp-inner">
+		<div class="mnp-head mno-anim"><p class="mnp-eyebrow">Our Values</p><h2 class="mnp-h2">私たちが大切にすること</h2></div>
+		<div class="mnp-values mno-stagger">
+						<div class="mnp-value mno-anim">
+				<div class="ph"><img src="wp-content/themes/mamanooto/assets/img/photos/welcome.webp" alt="" loading="lazy"><span class="no">01</span></div>
+				<h3>そのまま</h3>
 				<p>本音を話せる。背伸びしなくていい。誰かの正解に合わせなくていい。</p>
 			</div>
-			<div class="mno-keyword-card mno-anim">
-				<img class="anim-sway anim-delay-1" src="wp-content/themes/mamanooto/assets/img/circle_usako.png" alt="">
-				<div class="t">つながる</div>
+						<div class="mnp-value mno-anim">
+				<div class="ph"><img src="wp-content/themes/mamanooto/assets/img/photos/stroller.webp" alt="" loading="lazy"><span class="no">02</span></div>
+				<h3>つながる</h3>
 				<p>年齢も、住んでいる場所も、仕事も違う。だからこそ、新しい出会いが生まれる。</p>
 			</div>
-			<div class="mno-keyword-card mno-anim">
-				<img class="anim-sway anim-delay-2" src="wp-content/themes/mamanooto/assets/img/circle_wanta.png" alt="">
-				<div class="t">やってみる</div>
-				<p>「ちょっとやってみたい」を大切にする。小さな一歩を応援し、挑戦できるきっかけをつくる。</p>
+						<div class="mnp-value mno-anim">
+				<div class="ph"><img src="wp-content/themes/mamanooto/assets/img/photos/study.webp" alt="" loading="lazy"><span class="no">03</span></div>
+				<h3>やってみる</h3>
+				<p>「ちょっとやってみたい」を大切に。小さな一歩を応援し、挑戦のきっかけをつくる。</p>
 			</div>
-			<div class="mno-keyword-card mno-anim">
-				<img class="anim-sway anim-delay-3" src="wp-content/themes/mamanooto/assets/img/circle_oto.png" alt="">
-				<div class="t">共につくる</div>
-				<p>誰かが用意した場所に参加するだけじゃなく、みんなの声で、みんなの居場所をつくっていく。</p>
+						<div class="mnp-value mno-anim">
+				<div class="ph"><img src="wp-content/themes/mamanooto/assets/img/photos/craft.webp" alt="" loading="lazy"><span class="no">04</span></div>
+				<h3>共につくる</h3>
+				<p>用意された場所に参加するだけじゃなく、みんなの声で、みんなの居場所をつくる。</p>
 			</div>
-		</div>
-		<p class="mno-closing mno-anim">「ままのおと。」は、みんなで育てていくコミュニティです。</p>
+					</div>
 	</div>
 </section>
 
-<!-- どんなことができるの？ -->
-<section class="mno-section pink" id="cando">
-	<div class="mno-inner">
-		<div class="mno-sec-head"><img src="wp-content/themes/mamanooto/assets/img/sub_star.png" alt="" class="sec-icon"><h2><span class="en">What we do</span>どんなことができるの？</h2></div>		<div class="mno-cando mno-stagger">
-						<div class="mno-cando-item mno-anim anim-hop">
-				<img src="wp-content/themes/mamanooto/assets/img/icon_column.png" alt="">
-				<span>オンライン講座</span>
+<!-- どんなことができるの？（写真タイル） -->
+<section class="mnp-section mnp-pink" id="cando">
+	<div class="mnp-inner">
+		<div class="mnp-head mno-anim"><p class="mnp-eyebrow">What we do</p><h2 class="mnp-h2">ままのおと。でできること</h2>
+			<p class="mnp-lead">ただ「学ぶ場所」ではなく、「次の一歩が見つかる場所」へ。</p></div>
+		<div class="mnp-tiles mno-stagger">
+						<div class="mnp-tile mno-anim">
+				<img src="wp-content/themes/mamanooto/assets/img/photos/online.webp" alt="" loading="lazy">
+				<div class="cap"><h3>オンライン講座</h3><p>おうちから、子どもと一緒に参加OK</p></div>
 			</div>
-						<div class="mno-cando-item mno-anim anim-hop">
-				<img src="wp-content/themes/mamanooto/assets/img/sub_clover.png" alt="">
-				<span>専門家から学ぶ</span>
+						<div class="mnp-tile mno-anim">
+				<img src="wp-content/themes/mamanooto/assets/img/photos/tea.webp" alt="" loading="lazy">
+				<div class="cap"><h3>オンラインお茶会</h3><p>ママ同士で、ゆるっとおしゃべり</p></div>
 			</div>
-						<div class="mno-cando-item mno-anim anim-hop">
-				<img src="wp-content/themes/mamanooto/assets/img/icon_community.png" alt="">
-				<span>ママ同士の交流</span>
+						<div class="mnp-tile mno-anim">
+				<img src="wp-content/themes/mamanooto/assets/img/photos/nutrition.webp" alt="" loading="lazy">
+				<div class="cap"><h3>専門家から学ぶ</h3><p>栄養・子育て・こころ・お金のこと</p></div>
 			</div>
-						<div class="mno-cando-item mno-anim anim-hop">
-				<img src="wp-content/themes/mamanooto/assets/img/sub_ribbon.png" alt="">
-				<span>趣味・体験</span>
+						<div class="mnp-tile mno-anim">
+				<img src="wp-content/themes/mamanooto/assets/img/photos/yoga.webp" alt="" loading="lazy">
+				<div class="cap"><h3>体験・趣味</h3><p>ヨガ、美容、手づくり、おでかけ</p></div>
 			</div>
-						<div class="mno-cando-item mno-anim anim-hop">
-				<img src="wp-content/themes/mamanooto/assets/img/sub_heart.png" alt="">
-				<span>自分の「好き」を見つける</span>
+						<div class="mnp-tile mno-anim">
+				<img src="wp-content/themes/mamanooto/assets/img/photos/teacher.webp" alt="" loading="lazy">
+				<div class="cap"><h3>「好き」を仕事に</h3><p>得意を活かして講師として活躍</p></div>
 			</div>
-						<div class="mno-cando-item mno-anim anim-hop">
-				<img src="wp-content/themes/mamanooto/assets/img/sub_star.png" alt="">
-				<span>新しいことへの挑戦</span>
-			</div>
-						<div class="mno-cando-item mno-anim anim-hop">
-				<img src="wp-content/themes/mamanooto/assets/img/sub_flower_y.png" alt="">
-				<span>講師とのつながり</span>
-			</div>
-						<div class="mno-cando-item mno-anim anim-hop">
-				<img src="wp-content/themes/mamanooto/assets/img/icon_event.png" alt="">
-				<span>オフラインイベント</span>
-			</div>
-						<div class="mno-cando-item mno-anim anim-hop">
-				<img src="wp-content/themes/mamanooto/assets/img/sub_butterfly.png" alt="">
-				<span>全国の仲間とのつながり</span>
+						<div class="mnp-tile mno-anim">
+				<img src="wp-content/themes/mamanooto/assets/img/photos/kids.webp" alt="" loading="lazy">
+				<div class="cap"><h3>リアルイベント</h3><p>親子で参加できる交流の場</p></div>
 			</div>
 					</div>
-		<p class="mno-closing mno-anim">ただ「学ぶ場所」ではなく、<br>「次の一歩が見つかる場所」へ。</p>
 	</div>
 </section>
 
 <!-- 会員コース -->
 <section class="mno-section" id="courses">
 	<div class="mno-inner">
-		<div class="mno-sec-head"><img src="wp-content/themes/mamanooto/assets/img/sub_ribbon.png" alt="" class="sec-icon"><h2><span class="en">Course</span>会員コースと料金</h2></div>		<p class="mno-lead-center mno-anim">「入会してください」ではなくて——<br>こんな場所、一緒につくってみない？　まずは気軽にのぞいてみてね。</p>
-				<div class="mno-courses mno-stagger">
-			<div class="mno-course-card mno-anim">
+		<div class="mnp-head mno-anim"><p class="mnp-eyebrow">Course</p><h2 class="mnp-h2">会員コースと料金</h2>
+			<p class="mnp-lead">「入会してください」ではなくて——<br>こんな場所、一緒につくってみない？　まずは気軽にのぞいてみてね。</p></div>
+		<div class="mno-courses mno-stagger">
+			<div class="mno-course-card mnp-course mno-anim">
+				<div class="mnp-course-photo"><img src="wp-content/themes/mamanooto/assets/img/photos/tea.webp" alt="" loading="lazy"></div>
 				<span class="ribbon">まずは気軽に</span>
 				<h3>ベーシックコース</h3>
 				<div class="price">月々 1,980<small>円（税込）</small></div>
@@ -242,7 +282,8 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 					<a class="mno-textlink" href="course-1980/index.html">講座カレンダーを見る →</a>
 				</div>
 			</div>
-			<div class="mno-course-card c4980 mno-anim">
+			<div class="mno-course-card c4980 mnp-course mno-anim">
+				<div class="mnp-course-photo"><img src="wp-content/themes/mamanooto/assets/img/photos/study.webp" alt="" loading="lazy"></div>
 				<span class="ribbon">春ごろ開講予定</span>
 				<h3>稼ぐ・深く学ぶコース</h3>
 				<div class="price">月々 4,980<small>円（税込）</small></div>
@@ -266,7 +307,8 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <!-- 講座カテゴリー -->
 <section class="mno-section pink" id="categories">
 	<div class="mno-inner">
-		<div class="mno-sec-head"><img src="wp-content/themes/mamanooto/assets/img/icon_column.png" alt="" class="sec-icon"><h2><span class="en">Category</span>講座カテゴリー</h2></div>		<div class="mno-cats">
+		<div class="mnp-head mno-anim"><p class="mnp-eyebrow">Category</p><h2 class="mnp-h2">講座カテゴリー</h2></div>
+		<div class="mno-cats">
 						<a class="mno-cat-chip" href="lecture/%e5%ad%90%e8%82%b2%e3%81%a6/index.html">
 				<img src="wp-content/themes/mamanooto/assets/img/icon_kosodate.png" alt="">
 				<span>子育て<span class="kids"><br>0ちゃん・1才・2.3才・4才以降</span></span>
@@ -306,10 +348,11 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <!-- イベント -->
 <section class="mno-section" id="events">
 	<div class="mno-inner">
-		<div class="mno-sec-head"><img src="wp-content/themes/mamanooto/assets/img/icon_event.png" alt="" class="sec-icon"><h2><span class="en">Event</span>イベント・お知らせ</h2></div>				<div class="mno-posts mno-stagger">
+		<div class="mnp-head mno-anim"><p class="mnp-eyebrow">Event</p><h2 class="mnp-h2">イベント・お知らせ</h2></div>
+				<div class="mno-posts mno-stagger">
 									<a class="mno-post-card mno-anim" href="events/%e3%83%9e%e3%83%9e%e3%81%ae%e3%81%9f%e3%82%81%e3%81%ae%e3%81%8a%e9%87%91%e3%81%ae%e8%a9%b1/index.html">
 				<div class="thumb">
-										<img class="char" src="wp-content/themes/mamanooto/assets/img/wanta_wave.png" alt="" loading="lazy">
+										<img class="cover" src="wp-content/themes/mamanooto/assets/img/photos/tea.webp" alt="" loading="lazy">
 									</div>
 				<div class="body">
 										<span class="date">10月18日（日）</span>
@@ -320,7 +363,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 			</a>
 						<a class="mno-post-card mno-anim" href="events/%e3%81%af%e3%81%98%e3%82%81%e3%81%a6%e3%81%ae%e9%9b%a2%e4%b9%b3%e9%a3%9f%e8%ac%9b%e5%ba%a7/index.html">
 				<div class="thumb">
-										<img class="char" src="wp-content/themes/mamanooto/assets/img/usako_wave.png" alt="" loading="lazy">
+										<img class="cover" src="wp-content/themes/mamanooto/assets/img/photos/kids.webp" alt="" loading="lazy">
 									</div>
 				<div class="body">
 										<span class="date">10月11日（日）</span>
@@ -331,7 +374,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 			</a>
 						<a class="mno-post-card mno-anim" href="events/0%e3%81%a1%e3%82%83%e3%82%93%e3%83%9e%e3%83%9e%e3%81%ae%e3%82%aa%e3%83%b3%e3%83%a9%e3%82%a4%e3%83%b3%e3%81%8a%e8%8c%b6%e4%bc%9a/index.html">
 				<div class="thumb">
-										<img class="char" src="wp-content/themes/mamanooto/assets/img/oto_sit.png" alt="" loading="lazy">
+										<img class="cover" src="wp-content/themes/mamanooto/assets/img/photos/nutrition.webp" alt="" loading="lazy">
 									</div>
 				<div class="body">
 										<span class="date">10月4日（日）</span>
@@ -347,22 +390,19 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <!-- 講師＝一緒につくる仲間 -->
 <section class="mno-section olive" id="teachers">
 	<div class="mno-inner">
-		<div class="mno-sec-head"><img src="wp-content/themes/mamanooto/assets/img/sub_leaf.png" alt="" class="sec-icon"><h2><span class="en">Teacher</span>「講師」という仲間</h2></div>		<div class="mno-card mno-anim" style="margin-bottom:44px">
-			<div class="mno-teacher-invite">
-				<div>
-					<h3>この場所を一緒につくってくれる、<br>「講師」という仲間。</h3>
-					<p>ままのおと。の講師は、単に知識や技術を教える「先生」ではありません。</p>
-					<p>それぞれの経験・知識・得意なことを持ち寄り、「こんなことやってみたい！」というママのきっかけをつくる人。講師同士もつながり、一緒に企画を考えたり、新しい可能性を生み出したりしています。</p>
-					<p>「講師＝サービス提供者」ではなく、<strong>「コミュニティを一緒につくる仲間」</strong>。ままのおと。では、その関係をいちばん大切にしています。</p>
-					<p style="margin-top:20px"><a class="mno-btn olive" href="join-teacher/index.html">講師として一緒につくる</a></p>
-				</div>
-				<div class="chars">
-					<img class="anim-wave mno-anim char-pop" src="wp-content/themes/mamanooto/assets/img/usako_wave.png" alt="うさこ">
-					<img class="small anim-wave anim-delay-1 mno-anim char-pop" src="wp-content/themes/mamanooto/assets/img/wanta_wave.png" alt="わんた">
-				</div>
+		<div class="mnp-split mnp-teacher-invite mno-anim">
+			<div class="mnp-split-photo">
+				<img src="wp-content/themes/mamanooto/assets/img/photos/teacher.webp" alt="講師がママたちに教えている様子" loading="lazy">
+			</div>
+			<div class="mnp-split-text">
+				<p class="mnp-eyebrow">Teacher</p>
+				<h2 class="mnp-h2"><span class="nb">この場所を一緒につくる、</span><br><span class="nb">「講師」という仲間。</span></h2>
+				<p>ままのおと。の講師は、知識や技術を教えるだけの「先生」ではありません。それぞれの経験や得意なことを持ち寄り、「こんなことやってみたい！」というママのきっかけをつくる人です。</p>
+				<p>講師同士もつながり、一緒に企画を考えたり、新しい可能性を生み出したりしています。</p>
+				<p style="margin-top:20px"><a class="mno-btn olive" href="join-teacher/index.html">講師として一緒につくる</a></p>
 			</div>
 		</div>
-				<div class="mno-teachers mno-stagger">
+				<div class="mno-teachers mno-stagger" style="margin-top:48px">
 						<a class="mno-teacher-card mno-anim" href="teachers/tetsumoto/index.html">
 				<div class="face"><img width="300" height="300" src="wp-content/uploads/2026/09/teacher_tetsumoto-300x300.webp" class="attachment-medium size-medium wp-post-image" alt="" loading="lazy" decoding="async" /></div>
 				<h3>鉄本 智美</h3>
@@ -404,31 +444,26 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 			</div>
 </section>
 
-<!-- まだ完成していません -->
-<section class="mno-section" id="unfinished">
-	<div class="mno-inner">
-		<div class="mno-unfinished mno-anim">
-			<p class="mno-poem">
-				ままのおと。は、完成されたサービスではありません。<br>
-				参加するママ。講師。地域の人。企業。<br>
-				そして、これから出会うたくさんの仲間。<br>
-				みんなの<span class="em">「こんな場所があったらいいな」</span>という声から、<br>
-				少しずつ形を変えていきます。
-			</p>
-			<p class="big">だから、あなたも、この場所をつくる一人です。</p>
-			<div class="chars">
-				<img class="anim-wave mno-anim char-pop" src="wp-content/themes/mamanooto/assets/img/usako_wave.png" alt="">
-				<img class="anim-bob mno-anim char-pop" src="wp-content/themes/mamanooto/assets/img/oto_sit.png" alt="">
-				<img class="anim-wave anim-delay-1 mno-anim char-pop" src="wp-content/themes/mamanooto/assets/img/wanta_wave.png" alt="">
-			</div>
-		</div>
+<!-- まだ完成していません（全面写真） -->
+<section class="mnp-band" id="unfinished">
+	<img class="mnp-band-bg" src="wp-content/themes/mamanooto/assets/img/photos/kids.webp" alt="" loading="lazy">
+	<div class="mnp-band-in mno-anim">
+		<p class="poem">
+			ままのおと。は、完成されたサービスではありません。<br>
+			参加するママ。講師。地域の人。企業。<br>
+			そして、これから出会うたくさんの仲間。<br>
+			みんなの「こんな場所があったらいいな」という声から、<br>
+			少しずつ形を変えていきます。
+		</p>
+		<p class="big">だから、あなたも、<br class="sp">この場所をつくる一人です。</p>
 	</div>
 </section>
 
 <!-- これから目指す未来 -->
 <section class="mno-section alt" id="future">
 	<div class="mno-inner">
-		<div class="mno-sec-head"><img src="wp-content/themes/mamanooto/assets/img/sub_butterfly.png" alt="" class="sec-icon"><h2><span class="en">Future</span>これから目指す未来</h2></div>		<p class="mno-lead-center mno-anim">いまはオンラインコミュニティからのスタート。<br>でも、目指す場所はその先にあります。</p>
+		<div class="mnp-head mno-anim"><p class="mnp-eyebrow">Future</p><h2 class="mnp-h2">これから目指す未来</h2>
+			<p class="mnp-lead">いまはオンラインコミュニティからのスタート。<br>でも、目指す場所はその先にあります。</p></div>
 		<div class="mno-vision-flow mno-stagger">
 			<div class="mno-vision-step mno-anim">オンラインコミュニティ</div>
 			<div class="mno-vision-arrow mno-anim">▼</div>
@@ -447,7 +482,8 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <!-- 代表メッセージ -->
 <section class="mno-section pink" id="greeting">
 	<div class="mno-inner">
-		<div class="mno-sec-head"><img src="wp-content/themes/mamanooto/assets/img/sub_flower_w.png" alt="" class="sec-icon"><h2><span class="en">Message</span>代表メッセージ</h2></div>		<div class="mno-card mno-anim">
+		<div class="mnp-head mno-anim"><p class="mnp-eyebrow">Message</p><h2 class="mnp-h2">代表メッセージ</h2></div>
+		<div class="mno-card mno-anim">
 			<div class="mno-greeting">
 				<div class="photo"><img src="wp-content/themes/mamanooto/assets/img/tomomi_photo.jpg" alt="鉄本智美"></div>
 				<div>
@@ -468,7 +504,8 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <!-- 一緒につくる仲間 -->
 <section class="mno-section" id="partners">
 	<div class="mno-inner">
-		<div class="mno-sec-head"><img src="wp-content/themes/mamanooto/assets/img/icon_community.png" alt="" class="sec-icon"><h2><span class="en">Together</span>一緒につくる仲間</h2></div>		<p class="mno-lead-center mno-anim">ままのおと。は、一人でつくるものではありません。<br>いろんな立場の仲間と、一緒に育てていきます。</p>
+		<div class="mnp-head mno-anim"><p class="mnp-eyebrow">Together</p><h2 class="mnp-h2">一緒につくる仲間</h2>
+			<p class="mnp-lead">ままのおと。は、一人でつくるものではありません。<br>いろんな立場の仲間と、一緒に育てていきます。</p></div>
 		<div class="mno-partners mno-stagger">
 			<div class="mno-partner-chip mno-anim anim-hop"><img src="wp-content/themes/mamanooto/assets/img/circle_tomomi.png" alt="">講師・専門家</div>
 			<div class="mno-partner-chip mno-anim anim-hop"><img src="wp-content/themes/mamanooto/assets/img/circle_mama.png" alt="">ママ</div>
@@ -482,7 +519,8 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <!-- コラム -->
 <section class="mno-section alt" id="column">
 	<div class="mno-inner">
-		<div class="mno-sec-head"><img src="wp-content/themes/mamanooto/assets/img/icon_column.png" alt="" class="sec-icon"><h2><span class="en">Column</span>ままのおと。コラム</h2></div>				<p class="mno-note" style="text-align:center">コラムを準備中です。おたのしみに♪</p>
+		<div class="mnp-head mno-anim"><p class="mnp-eyebrow">Column</p><h2 class="mnp-h2">ままのおと。コラム</h2></div>
+				<p class="mno-note" style="text-align:center">コラムを準備中です。おたのしみに♪</p>
 			</div>
 </section>
 
@@ -491,14 +529,16 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <!-- よくある質問 -->
 <section class="mno-section alt" id="faq">
 	<div class="mno-inner" style="max-width:860px">
-		<div class="mno-sec-head"><img src="wp-content/themes/mamanooto/assets/img/sub_leaf.png" alt="" class="sec-icon"><h2><span class="en">FAQ</span>よくある質問</h2></div>		<div class="mno-faq"><details class="mno-anim"><summary><span class="q">Q</span>どんな人が参加していますか？</summary><div class="a"><span class="q">A</span><p>0歳〜小学生くらいのお子さんを育てているママが中心です。「子育ての話をしたい」「自分の好きなことを見つけたい」「何か始めてみたい」など、参加のきっかけはさまざま。はじめての方も安心してご参加ください。</p></div></details><details class="mno-anim"><summary><span class="q">Q</span>オンラインでの参加は、どうすればいいですか？</summary><div class="a"><span class="q">A</span><p>講座やお茶会はビデオ会議ツール「Zoom」で行います。スマートフォンがあれば参加できます。顔出し・発言は自由なので、聞くだけの参加でも大丈夫です。</p></div></details><details class="mno-anim"><summary><span class="q">Q</span>料金はいくらですか？</summary><div class="a"><span class="q">A</span><p>ベーシックコースは、いま入会すると月々1,980円（税込）です。会員数に応じて入会時の料金が上がっていきますが、入会したときの料金のままずっと続けられます。</p></div></details><details class="mno-anim"><summary><span class="q">Q</span>お支払い方法は？</summary><div class="a"><span class="q">A</span><p>クレジットカード決済（VISA／Mastercard／JCB／American Express／Diners Club）でお支払いいただけます。月額コースは毎月自動で決済されます。</p></div></details><details class="mno-anim"><summary><span class="q">Q</span>解約はいつでもできますか？</summary><div class="a"><span class="q">A</span><p>はい、いつでも解約できます。次回決済日の前日までに、お問い合わせフォームまたはメールでお知らせください。違約金はかかりません。お支払い済みの期間の終わりまでご利用いただけます。</p></div></details><details class="mno-anim"><summary><span class="q">Q</span>チケットは何に使えますか？</summary><div class="a"><span class="q">A</span><p>講師のマンツーマン講座や特別講座に使えます。有効期限はご購入日から6ヶ月間です。</p></div></details><details class="mno-anim"><summary><span class="q">Q</span>講座に参加できなかったときは？</summary><div class="a"><span class="q">A</span><p>講座によってはアーカイブ動画を会員ページで公開します。忙しいママでも、自分のペースで学べます。</p></div></details></div>		<p style="text-align:center;margin-top:28px"><a class="mno-btn ghost" href="contact/index.html">ほかの質問はこちらから</a></p>
+		<div class="mnp-head mno-anim"><p class="mnp-eyebrow">FAQ</p><h2 class="mnp-h2">よくある質問</h2></div>
+		<div class="mno-faq"><details class="mno-anim"><summary><span class="q">Q</span>どんな人が参加していますか？</summary><div class="a"><span class="q">A</span><p>0歳〜小学生くらいのお子さんを育てているママが中心です。「子育ての話をしたい」「自分の好きなことを見つけたい」「何か始めてみたい」など、参加のきっかけはさまざま。はじめての方も安心してご参加ください。</p></div></details><details class="mno-anim"><summary><span class="q">Q</span>オンラインでの参加は、どうすればいいですか？</summary><div class="a"><span class="q">A</span><p>講座やお茶会はビデオ会議ツール「Zoom」で行います。スマートフォンがあれば参加できます。顔出し・発言は自由なので、聞くだけの参加でも大丈夫です。</p></div></details><details class="mno-anim"><summary><span class="q">Q</span>料金はいくらですか？</summary><div class="a"><span class="q">A</span><p>ベーシックコースは、いま入会すると月々1,980円（税込）です。会員数に応じて入会時の料金が上がっていきますが、入会したときの料金のままずっと続けられます。</p></div></details><details class="mno-anim"><summary><span class="q">Q</span>お支払い方法は？</summary><div class="a"><span class="q">A</span><p>クレジットカード決済（VISA／Mastercard／JCB／American Express／Diners Club）でお支払いいただけます。月額コースは毎月自動で決済されます。</p></div></details><details class="mno-anim"><summary><span class="q">Q</span>解約はいつでもできますか？</summary><div class="a"><span class="q">A</span><p>はい、いつでも解約できます。次回決済日の前日までに、お問い合わせフォームまたはメールでお知らせください。違約金はかかりません。お支払い済みの期間の終わりまでご利用いただけます。</p></div></details><details class="mno-anim"><summary><span class="q">Q</span>チケットは何に使えますか？</summary><div class="a"><span class="q">A</span><p>講師のマンツーマン講座や特別講座に使えます。有効期限はご購入日から6ヶ月間です。</p></div></details><details class="mno-anim"><summary><span class="q">Q</span>講座に参加できなかったときは？</summary><div class="a"><span class="q">A</span><p>講座によってはアーカイブ動画を会員ページで公開します。忙しいママでも、自分のペースで学べます。</p></div></details></div>		<p style="text-align:center;margin-top:28px"><a class="mno-btn ghost" href="contact/index.html">ほかの質問はこちらから</a></p>
 	</div>
 </section>
 
 <!-- 運営会社 -->
 <section class="mno-section" id="company">
 	<div class="mno-inner">
-		<div class="mno-sec-head"><img src="wp-content/themes/mamanooto/assets/img/sub_note.png" alt="" class="sec-icon"><h2><span class="en">Company</span>運営会社</h2></div>		<div class="mno-company-grid">
+		<div class="mnp-head mno-anim"><p class="mnp-eyebrow">Company</p><h2 class="mnp-h2">運営会社</h2></div>
+		<div class="mno-company-grid">
 			<div class="mno-company-story mno-anim">
 				<p class="co">株式会社Coconeiro</p>
 				<p class="philo">一人ひとりが本来の力を発揮し、<br>自分らしく生きることで、<br>人生の可能性をひらく。</p>
@@ -506,7 +546,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 				<div class="mean"><span><b>Coco</b>今ここ・個々・心</span><span><b>neiro</b>音色・心の音</span></div>
 			</div>
 			<div class="mno-company-info mno-anim">
-				<dl class="mno-dl"><div class="row"><dt>会社名</dt><dd>株式会社Coconeiro</dd></div><div class="row"><dt>代表者</dt><dd>代表取締役　鉄本 智美</dd></div><div class="row"><dt>所在地</dt><dd>〒342-0045<br>埼玉県吉川市木売2-19-2 2F シェアサロンLien</dd></div><div class="row"><dt>設立</dt><dd>2026年</dd></div><div class="row"><dt>資本金</dt><dd>40万円</dd></div><div class="row"><dt>事業内容</dt><dd>コミュニティ事業（ママのコミュニティ「ままのおと。」の運営）<br />
+				<dl class="mno-dl"><div class="row"><dt>会社名</dt><dd>株式会社Coconeiro</dd></div><div class="row"><dt>代表者</dt><dd>代表取締役　鉄本 智美</dd></div><div class="row"><dt>所在地</dt><dd>〒342-0045<br>埼玉県吉川市木売2-19-2 2F シェアサロンLien</dd></div><div class="row"><dt>設立</dt><dd>2026年</dd></div><div class="row"><dt>事業内容</dt><dd>コミュニティ事業（ママのコミュニティ「ままのおと。」の運営）<br />
 講座・イベントの企画運営<br />
 講師・人材育成<br />
 女性のライフ・キャリア支援<br />
@@ -516,36 +556,48 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 	</div>
 </section>
 
-<!-- 3つの入口 -->
+<!-- 3つの入口（写真カード） -->
 <section class="mno-section pink" id="gates">
 	<div class="mno-inner">
-		<div class="mno-sec-head"><img src="wp-content/themes/mamanooto/assets/img/sub_flower_y.png" alt="" class="sec-icon"><h2><span class="en">Join us</span>あなたに合った入口から</h2></div>		<div class="mno-gates mno-stagger">
-			<a class="mno-gate-card mno-anim" href="join/index.html">
-				<img class="anim-sway" src="wp-content/themes/mamanooto/assets/img/circle_mama.png" alt="">
+		<div class="mnp-head mno-anim"><p class="mnp-eyebrow">Join us</p><h2 class="mnp-h2">あなたに合った入口から</h2></div>
+		<div class="mnp-gates mno-stagger">
+			<a class="mnp-gate mno-anim" href="join/index.html">
+				<div class="ph"><img src="wp-content/themes/mamanooto/assets/img/photos/welcome.webp" alt="" loading="lazy"></div>
 				<span class="who">ママとして参加したい</span>
 				<h3>会員として参加する</h3>
-				<span class="go">料金・会員登録はこちら</span>
+				<span class="go">料金・会員登録はこちら →</span>
 			</a>
-			<a class="mno-gate-card mno-anim" href="join-teacher/index.html">
-				<img class="anim-sway anim-delay-1" src="wp-content/themes/mamanooto/assets/img/circle_tomomi.png" alt="">
+			<a class="mnp-gate mno-anim" href="join-teacher/index.html">
+				<div class="ph"><img src="wp-content/themes/mamanooto/assets/img/photos/teacher.webp" alt="" loading="lazy"></div>
 				<span class="who">講師として参加したい</span>
 				<h3>講師として一緒につくる</h3>
-				<span class="go">講師募集・応募はこちら</span>
+				<span class="go">講師募集・応募はこちら →</span>
 			</a>
-			<a class="mno-gate-card mno-anim" href="partner/index.html">
-				<img class="anim-sway anim-delay-2" src="wp-content/themes/mamanooto/assets/img/circle_wanta.png" alt="">
+			<a class="mnp-gate mno-anim" href="partner/index.html">
+				<div class="ph"><img src="wp-content/themes/mamanooto/assets/img/photos/circle.webp" alt="" loading="lazy"></div>
 				<span class="who">一緒に何かしたい</span>
 				<h3>企業・地域・パートナーの方へ</h3>
-				<span class="go">協業・コラボレーション</span>
+				<span class="go">協業・コラボレーション →</span>
 			</a>
 		</div>
+	</div>
+</section>
+
+<!-- 最後のひと押し（写真＋CTA） -->
+<section class="mnp-final" id="final">
+	<img class="mnp-band-bg" src="wp-content/themes/mamanooto/assets/img/photos/stroller.webp" alt="" loading="lazy">
+	<div class="mnp-final-in mno-anim">
+		<p class="mnp-final-copy">ひとりで頑張らなくていい。<br>ここから、あなたの「やってみたい」を。</p>
+		<a class="mno-btn big" href="join/index.html">会員登録（月々1,980円〜）</a>
+		<p class="mnp-final-note">まずはのぞいてみるだけでも大丈夫です。<a href="contact/index.html">お問い合わせ</a></p>
 	</div>
 </section>
 
 <!-- 会員・講師メニュー -->
 <section class="mno-section" id="members-menu">
 	<div class="mno-inner">
-		<div class="mno-sec-head"><img src="wp-content/themes/mamanooto/assets/img/icon_community.png" alt="" class="sec-icon"><h2><span class="en">Members</span>会員・講師のみなさまへ</h2></div>		<div class="mno-member-links mno-stagger">
+		<div class="mnp-head mno-anim"><p class="mnp-eyebrow">Members</p><h2 class="mnp-h2">会員・講師のみなさまへ</h2></div>
+		<div class="mno-member-links mno-stagger">
 						<a class="mno-member-link mno-anim" href="login/index.html">
 				<img src="wp-content/themes/mamanooto/assets/img/circle_mama.png" alt="">
 				会員・講師ログイン
@@ -634,6 +686,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <script type="speculationrules">
 {"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/mamanooto/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
 </script>
+<script id="mamanooto-photo-js" src="wp-content/themes/mamanooto/assets/js/photo.js"></script>
 <script id="mamanooto-guide-js" src="wp-content/themes/mamanooto/assets/js/navigator.js"></script>
 <div style="position:fixed;left:0;right:0;bottom:0;z-index:9999;background:#6b5a4e;color:#fff;font-size:12px;text-align:center;padding:6px 10px;opacity:.92">これは確認用のプレビューです（フォームの送信・ログインは本番公開後に使えます）</div><script>document.addEventListener("submit",function(e){e.preventDefault();alert("プレビューのため送信はできません。本番公開後に使えるようになります。");},true);</script></body>
 </html>

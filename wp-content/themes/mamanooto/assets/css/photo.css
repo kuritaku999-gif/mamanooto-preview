@@ -1,0 +1,207 @@
+/* =============================================
+   v6.0 実写版トップ（front-page のみ読み込み）
+   写真をたっぷり・やわらかいミルクベージュ×さくらピンクはそのまま
+   ============================================= */
+
+.mnp-inner { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+.mnp-section { padding: 88px 0; position: relative; }
+.mnp-cream { background: var(--ivory); }
+.mnp-pink { background: var(--pink-pale); }
+
+.mnp-eyebrow {
+	font-size: 13px; font-weight: 700; letter-spacing: 0.22em; color: var(--accent-deep);
+	margin-bottom: 10px; display: inline-flex; align-items: center; gap: 10px;
+}
+.mnp-eyebrow::before { content: ""; width: 26px; height: 2px; background: var(--accent); border-radius: 2px; }
+.mnp-h2 { font-size: clamp(24px, 3.4vw, 36px); line-height: 1.5; letter-spacing: 0.04em; color: var(--text); }
+.mnp-head { text-align: center; margin-bottom: 44px; }
+.mnp-head .mnp-eyebrow::after { content: ""; width: 26px; height: 2px; background: var(--accent); border-radius: 2px; }
+.mnp-lead { margin-top: 14px; color: var(--text-light); font-size: 15px; line-height: 2; }
+.mnp-body { line-height: 2.1; margin-top: 18px; }
+
+/* ---------- ヒーロー ---------- */
+.mnp-hero { position: relative; min-height: min(92vh, 860px); display: flex; align-items: flex-end; overflow: hidden; }
+.mnp-hero-photo { position: absolute; inset: 0; }
+.mnp-hero-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 40%; animation: mnp-zoom 18s ease-out both; }
+.mnp-hero-photo::after {
+	content: ""; position: absolute; inset: 0;
+	background: linear-gradient(90deg, rgba(253, 246, 237, 0.95) 0%, rgba(253, 246, 237, 0.85) 40%, rgba(253, 246, 237, 0) 68%);
+}
+@keyframes mnp-zoom { from { transform: scale(1.08); } to { transform: scale(1); } }
+.mnp-hero-in { position: relative; z-index: 1; width: 100%; max-width: 1160px; margin: 0 auto; padding: 0 28px 96px; }
+.mnp-hero-copy { max-width: 640px; }
+.mnp-badge {
+	display: inline-block; background: #fff; color: var(--accent-deep); font-weight: 700; font-size: 13px;
+	padding: 8px 18px; border-radius: 999px; box-shadow: var(--shadow-soft); margin-bottom: 22px;
+}
+.mnp-badge b { font-size: 18px; margin: 0 2px; }
+.mnp-hero h1 { font-size: clamp(28px, 3.7vw, 48px); line-height: 1.45; letter-spacing: 0.05em; color: var(--text); margin-bottom: 18px; }
+.mnp-hero h1 .ln { display: block; white-space: nowrap; }
+.mnp-hero h1 .ln:first-child { color: var(--accent-deep); }
+.mnp-hero .sub { font-size: clamp(14px, 1.7vw, 17px); line-height: 1.9; margin-bottom: 28px; }
+.mnp-hero-cta { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
+.mnp-btn-line {
+	display: inline-block; padding: 14px 26px; border-radius: 999px; border: 2px solid var(--text);
+	background: rgba(255, 255, 255, 0.7); font-weight: 700; font-size: 15px; color: var(--text);
+}
+.mnp-btn-line:hover { background: #fff; opacity: 1; }
+.mnp-hero-teacher { margin-top: 16px; font-size: 13px; color: var(--text-light); }
+.mnp-hero-teacher a { color: var(--accent-deep); text-decoration: underline; }
+.mnp-scroll {
+	position: absolute; left: 50%; bottom: 18px; transform: translateX(-50%); z-index: 1;
+	font-size: 11px; letter-spacing: 0.3em; color: var(--text); padding-bottom: 34px;
+}
+.mnp-scroll::after {
+	content: ""; position: absolute; left: 50%; bottom: 0; width: 1px; height: 28px; background: var(--text);
+	animation: mnp-line 2s ease-in-out infinite;
+}
+@keyframes mnp-line { 0% { transform: scaleY(0); transform-origin: top; } 50% { transform: scaleY(1); transform-origin: top; } 51% { transform-origin: bottom; } 100% { transform: scaleY(0); transform-origin: bottom; } }
+
+/* ---------- 写真が流れる帯（チェキ風） ---------- */
+.mnp-marquee { padding: 56px 0 40px; overflow: hidden; background: var(--base); }
+.mnp-marquee-track { display: flex; gap: 28px; width: max-content; animation: mnp-flow 60s linear infinite; }
+.mnp-marquee:hover .mnp-marquee-track { animation-play-state: paused; }
+@keyframes mnp-flow { to { transform: translateX(-50%); } }
+.mnp-polaroid {
+	margin: 0; background: #fff; padding: 10px 10px 14px; border-radius: 6px; box-shadow: 0 8px 22px rgba(150, 110, 80, 0.16);
+	width: 260px; flex: none; transform: rotate(-2deg); position: relative;
+}
+.mnp-polaroid:nth-child(even) { transform: rotate(2deg) translateY(10px); }
+.mnp-polaroid::before { /* マスキングテープ */
+	content: ""; position: absolute; top: -10px; left: 50%; width: 76px; height: 22px; transform: translateX(-50%) rotate(-3deg);
+	background: rgba(246, 201, 188, 0.75);
+}
+.mnp-polaroid:nth-child(3n)::before { background: rgba(169, 183, 140, 0.6); }
+.mnp-polaroid:nth-child(3n+1)::before { background: rgba(233, 207, 165, 0.75); }
+.mnp-polaroid img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 3px; }
+.mnp-polaroid figcaption { text-align: center; font-size: 13px; font-weight: 700; margin-top: 8px; color: var(--text); }
+
+/* ---------- 写真＋文章の2カラム ---------- */
+.mnp-split { display: grid; grid-template-columns: 1.05fr 1fr; gap: 56px; align-items: center; }
+.mnp-split.reverse .mnp-split-photo { order: 2; }
+.mnp-split-photo { position: relative; }
+.mnp-split-photo > img:first-child {
+	width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 28px 28px 28px 120px;
+	box-shadow: 0 16px 40px rgba(150, 110, 80, 0.18);
+}
+.mnp-split.reverse .mnp-split-photo > img:first-child { border-radius: 28px 120px 28px 28px; }
+.mnp-accent-char { position: absolute; width: 120px; left: -26px; bottom: -34px; filter: drop-shadow(0 8px 14px rgba(150, 110, 80, 0.25)); }
+
+/* こんな気持ち */
+.mnp-worries { margin: 6px 0 26px; }
+.mnp-worries li {
+	background: #fff; border-radius: 16px; padding: 14px 18px 14px 50px; margin-bottom: 12px; position: relative;
+	box-shadow: var(--shadow-soft); line-height: 1.7; font-size: 15px;
+}
+.mnp-worries li::before {
+	content: "✓"; position: absolute; left: 16px; top: 50%; transform: translateY(-50%);
+	width: 24px; height: 24px; border-radius: 50%; background: var(--pink); color: #fff; font-weight: 700;
+	display: grid; place-items: center; font-size: 13px;
+}
+.mnp-worries b { color: var(--accent-deep); }
+.mnp-answer { font-size: clamp(18px, 2.2vw, 22px); font-weight: 700; line-height: 1.7; }
+.mnp-answer span { background: linear-gradient(transparent 60%, #FBD9CD 60%); }
+#worries .mnp-eyebrow { font-size: clamp(18px, 2.2vw, 22px); letter-spacing: 0.06em; color: var(--text); }
+#worries .mnp-eyebrow::before { display: none; }
+
+/* ---------- 大切にすること ---------- */
+.mnp-values { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+.mnp-value .ph { position: relative; margin-bottom: 16px; }
+.mnp-value .ph img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 999px 999px 24px 24px; }
+.mnp-value .no {
+	position: absolute; right: 10px; bottom: -14px; width: 48px; height: 48px; border-radius: 50%;
+	background: var(--accent); color: #fff; font-weight: 700; display: grid; place-items: center; font-size: 15px;
+	box-shadow: var(--shadow-soft);
+}
+.mnp-value h3 { font-size: 20px; margin-bottom: 6px; color: var(--accent-deep); }
+.mnp-value p { font-size: 14px; line-height: 1.85; }
+
+/* ---------- できること（写真タイル） ---------- */
+.mnp-tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.mnp-tile { position: relative; border-radius: 24px; overflow: hidden; aspect-ratio: 4 / 3; box-shadow: var(--shadow); }
+.mnp-tile img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease; }
+.mnp-tile:hover img { transform: scale(1.06); }
+.mnp-tile .cap {
+	position: absolute; left: 0; right: 0; bottom: 0; padding: 40px 18px 16px; color: #fff;
+	background: linear-gradient(transparent, rgba(80, 55, 40, 0.72));
+}
+.mnp-tile h3 { font-size: 18px; color: #fff; margin-bottom: 2px; }
+.mnp-tile p { font-size: 13px; opacity: 0.95; }
+
+/* ---------- コースカードに写真 ---------- */
+.mnp-course { padding-top: 0 !important; overflow: hidden; }
+.mnp-course-photo { margin: 0 -28px 18px; }
+.mnp-course-photo img { width: 100%; aspect-ratio: 16 / 7; object-fit: cover; display: block; }
+.mnp-course .ribbon { top: 14px; z-index: 1; }
+
+/* ---------- イベント・コラムのサムネ ---------- */
+#events .thumb img.cover, #column .thumb img.cover { width: 100%; height: 100%; object-fit: cover; }
+
+/* ---------- 講師の呼びかけ ---------- */
+.mnp-teacher-invite { background: #fff; border-radius: var(--radius-l); padding: 36px; box-shadow: var(--shadow-soft); }
+.mnp-teacher-invite p { line-height: 2; margin-top: 10px; }
+.mnp-teacher-invite .mnp-h2 { font-size: clamp(22px, 2.6vw, 30px); }
+.mnp-teacher-invite .mnp-h2 .nb { white-space: nowrap; }
+
+/* ---------- 全面写真バンド ---------- */
+.mnp-band, .mnp-final { position: relative; overflow: hidden; padding: 120px 20px; text-align: center; }
+.mnp-band-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.mnp-band::after, .mnp-final::after { content: ""; position: absolute; inset: 0; background: rgba(253, 246, 237, 0.35); }
+.mnp-band-in, .mnp-final-in { background: rgba(255, 253, 248, 0.88); border-radius: 32px; padding: 44px 40px; box-shadow: 0 16px 40px rgba(120, 80, 60, 0.15); }
+.mnp-band-in, .mnp-final-in { position: relative; z-index: 1; max-width: 760px; margin: 0 auto; }
+.mnp-band .poem { line-height: 2.3; font-size: 15px; }
+.mnp-band .big { margin-top: 26px; font-size: clamp(22px, 3vw, 30px); font-weight: 700; color: var(--accent-deep); line-height: 1.6; }
+.sp { display: none; }
+
+
+.mnp-final-copy { font-size: clamp(22px, 3.2vw, 34px); font-weight: 700; line-height: 1.7; margin-bottom: 28px; }
+.mnp-final-note { margin-top: 16px; font-size: 13px; }
+.mnp-final-note a { color: var(--accent-deep); text-decoration: underline; margin-left: 6px; }
+
+/* ---------- 入口カード ---------- */
+.mnp-gates { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.mnp-gate { background: #fff; border-radius: 24px; overflow: hidden; box-shadow: var(--shadow-soft); display: block; color: var(--text); padding-bottom: 22px; transition: transform 0.3s; }
+.mnp-gate:hover { transform: translateY(-4px); opacity: 1; }
+.mnp-gate .ph img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; }
+.mnp-gate .who { display: block; font-size: 12px; color: var(--text-light); margin: 16px 20px 2px; }
+.mnp-gate h3 { font-size: 18px; margin: 0 20px 8px; }
+.mnp-gate .go { display: block; margin: 0 20px; font-size: 13px; font-weight: 700; color: var(--accent-deep); }
+
+/* ---------- スマホ ---------- */
+@media (max-width: 900px) {
+	.mnp-section { padding: 64px 0; }
+	.mnp-split { grid-template-columns: 1fr; gap: 32px; }
+	.mnp-split.reverse .mnp-split-photo { order: 0; }
+	.mnp-values { grid-template-columns: repeat(2, 1fr); gap: 26px 16px; }
+	.mnp-tiles { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+	.mnp-gates { grid-template-columns: 1fr; }
+	.mnp-teacher-invite { padding: 22px; }
+}
+@media (max-width: 640px) {
+	.mnp-hero { min-height: auto; display: block; }
+	.mnp-hero-photo { position: relative; height: 58vw; min-height: 240px; }
+	.mnp-hero-photo::after { background: linear-gradient(rgba(253, 246, 237, 0) 55%, var(--base) 100%); }
+	.mnp-hero-in { padding: 0 20px 56px; margin-top: -28px; text-align: center; }
+	.mnp-hero-copy { margin: 0 auto; }
+	.mnp-hero-cta { justify-content: center; }
+	.mnp-hero-cta .mno-btn, .mnp-btn-line { width: 100%; text-align: center; }
+	.mnp-scroll { display: none; }
+	.mnp-polaroid { width: 190px; }
+	.mnp-tiles { grid-template-columns: 1fr 1fr; }
+	.mnp-tile { aspect-ratio: 1 / 1; border-radius: 18px; }
+	.mnp-tile .cap { padding: 30px 12px 10px; }
+	.mnp-tile h3 { font-size: 15px; }
+	.mnp-tile p { font-size: 11px; }
+	.mnp-value h3 { font-size: 17px; }
+	.mnp-value p { font-size: 13px; }
+	.mnp-accent-char { width: 84px; left: -6px; bottom: -24px; }
+	.mnp-band, .mnp-final { padding: 64px 16px; }
+	.mnp-band-in, .mnp-final-in { padding: 30px 20px; }
+	.mnp-hero h1 { font-size: clamp(22px, 6.4vw, 30px); }
+	.mnp-band .poem { font-size: 14px; text-align: left; }
+	.mnp-band .poem br { display: none; }
+	.sp { display: inline; }
+}
+@media (prefers-reduced-motion: reduce) {
+	.mnp-hero-photo img, .mnp-marquee-track, .mnp-scroll::after { animation: none !important; }
+}
