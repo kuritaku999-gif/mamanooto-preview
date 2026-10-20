@@ -9,9 +9,17 @@ html.mno-loading .mno-loader { display: block; }
 .mno-loader {
 	position: fixed; inset: 0; z-index: 9999; color: var(--text); overflow: hidden;
 	--cx: 50%; --cy: 42%; --r: 0px;
-	transition: opacity 1s ease, visibility 0s linear 1s;
+	transition: opacity 2s cubic-bezier(.4,0,.2,1), visibility 0s linear 2s;
 }
 .mno-loader.is-out { opacity: 0; visibility: hidden; }
+/* 窓から差しこむ光（終わりの切りかえ） */
+.mno-loader .ld-light { position: absolute; inset: 0; pointer-events: none; opacity: 0; z-index: 2;
+	background: radial-gradient(90% 80% at 28% 30%, #fffdf8 0%, #fff6ea 45%, rgba(253, 246, 237, .96) 100%);
+	transition: opacity 1.4s cubic-bezier(.4,0,.2,1); }
+.mno-loader.t-bloom .ld-light { opacity: 1; }
+.mno-loader.t-bloom video { filter: brightness(1.3) saturate(.85) blur(4px); transition: transform 2.4s cubic-bezier(.65,0,.35,1), filter 1.4s ease; }
+.mno-loader.t-bloom .ld-felt { opacity: .6; transition: opacity 1.4s; }
+.mno-loader.t-bloom .ld-skip { opacity: 0; transition: opacity .4s; }
 .mno-loader .ld-paper {
 	position: absolute; inset: 0;
 	background:
@@ -89,13 +97,13 @@ html.mno-loading .mno-loader { display: block; }
 
 /* ローディング後、ヒーローがやさしく現れる */
 .mno-has-loader .mnp-hero-copy > * { opacity: 0; transform: translateY(18px); }
-.mno-has-loader.mno-ready .mnp-hero-copy > * { opacity: 1; transform: none; transition: opacity 1.1s ease, transform 1.3s cubic-bezier(.22,.8,.24,1); }
-.mno-has-loader.mno-ready .mnp-hero-copy > *:nth-child(2) { transition-delay: .15s; }
-.mno-has-loader.mno-ready .mnp-hero-copy > *:nth-child(3) { transition-delay: .35s; }
-.mno-has-loader.mno-ready .mnp-hero-copy > *:nth-child(4) { transition-delay: .5s; }
-.mno-has-loader.mno-ready .mnp-hero-copy > *:nth-child(5) { transition-delay: .65s; }
-.mno-has-loader .mnp-hero-photo img { animation: none; transform: scale(1.1); }
-.mno-has-loader.mno-ready .mnp-hero-photo img { transform: scale(1); transition: transform 9s cubic-bezier(.2,.7,.2,1); }
+.mno-has-loader.mno-ready .mnp-hero-copy > * { opacity: 1; transform: none; transition: opacity 1.2s ease .9s, transform 1.4s cubic-bezier(.22,.8,.24,1) .9s; }
+.mno-has-loader.mno-ready .mnp-hero-copy > *:nth-child(2) { transition-delay: 1.05s; }
+.mno-has-loader.mno-ready .mnp-hero-copy > *:nth-child(3) { transition-delay: 1.25s; }
+.mno-has-loader.mno-ready .mnp-hero-copy > *:nth-child(4) { transition-delay: 1.4s; }
+.mno-has-loader.mno-ready .mnp-hero-copy > *:nth-child(5) { transition-delay: 1.55s; }
+.mno-has-loader .mnp-hero-photo img { animation: none; transform: scale(1.08); filter: blur(14px) brightness(1.25) saturate(.85); }
+.mno-has-loader.mno-ready .mnp-hero-photo img { transform: scale(1); filter: none; transition: transform 9s cubic-bezier(.2,.7,.2,1), filter 2.6s cubic-bezier(.4,0,.2,1); }
 
 /* ヒーローの見出し：1行ずつ光がとおる */
 .mnp-hero-h1 .ln { position: relative; }
@@ -117,7 +125,7 @@ html.mno-loading .mno-loader { display: block; }
 @keyframes mno-spin { from { transform: translate(-50%, -6px) rotateY(-35deg); } to { transform: translate(-50%, -6px) rotateY(35deg); } }
 @keyframes mno-mobile-rot { 0%, 100% { transform: rotate(-1.5deg); } 50% { transform: rotate(1.5deg); } }
 .mno-has-loader .mno-mobile { opacity: 0; transform: translateY(-40px); }
-.mno-has-loader.mno-ready .mno-mobile { opacity: 1; transform: none; transition: opacity 1.2s .4s, transform 1.6s .4s cubic-bezier(.34,1.3,.64,1); }
+.mno-has-loader.mno-ready .mno-mobile { opacity: 1; transform: none; transition: opacity 1.4s 1.2s, transform 1.8s 1.2s cubic-bezier(.34,1.3,.64,1); }
 @media (max-width: 640px) {
 	.mno-mobile { right: 8px; width: 170px; height: 170px; }
 	.mno-mobile .str { height: calc(var(--len) * .6); }
@@ -254,3 +262,10 @@ html.mno-loading .mno-loader { display: block; }
 	.mno-mask img { transform: none !important; }
 	.mno-mobile, .mno-mobile .str, .mno-mobile .str img, .mno-wave svg, .mno-wave .note, .mnp-polaroid, .mno-faces-track, [class*="ui-"] * { animation: none !important; }
 }
+
+/* ローディング後：ヘッダー・案内キャラは写真のあとから、そっと */
+.mno-has-loader .mno-header { opacity: 0; transform: translateY(-10px); }
+.mno-has-loader.mno-ready .mno-header { opacity: 1; transform: none; transition: opacity 1.2s ease .7s, transform 1.4s cubic-bezier(.22,.8,.24,1) .7s; }
+.mno-has-loader .mno-guide { opacity: 0; }
+.mno-has-loader.mno-ready .mno-guide { opacity: 1; transition: opacity 1.2s ease 2.4s; }
+@media (prefers-reduced-motion: reduce) { .mno-has-loader .mno-header, .mno-has-loader .mno-guide { opacity: 1 !important; transform: none !important; } }

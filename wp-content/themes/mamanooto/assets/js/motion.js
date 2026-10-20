@@ -90,7 +90,6 @@
 		try { v.load(); } catch (e) {}
 
 		var fx = new FX(loader.querySelector('.ld-felt'));
-		var short = ls('mno_intro_seen') && (Date.now() - (+ls('mno_intro_seen'))) < 7 * 864e5;
 		var vw = window.innerWidth, vh = window.innerHeight;
 		var R = port ? Math.min(vw * .40, vh * .23) : Math.min(vh * .29, vw * .21, 260);
 		var cy = port ? .36 : .42;
@@ -111,25 +110,33 @@
 				fx.add({ x: vw / 2 + Math.cos(a) * R, y: vh * cy + Math.sin(a) * R, vx: Math.cos(a) * 18, vy: -24 - Math.random() * 30, sw: 14, s: 22 + Math.random() * 26, life: 4 + Math.random() * 2.5, fs: 5, a: .95 });
 			}
 		}
+		/* 終わり方：映像 → 窓から差しこむ光につつまれる → 光の中からトップの写真が浮かびあがる */
+		var hero = document.querySelector('.mnp-hero-photo img');
+		var heroReady = new Promise(function (res) {
+			if (!hero) return res();
+			if (hero.complete) return res();
+			hero.addEventListener('load', res); hero.addEventListener('error', res);
+		});
+		function bloom() { cls('t-bloom'); }
+		function reveal() {
+			ls('mno_intro_seen', String(Date.now()));
+			ready();                                /* 光の下で、トップの写真がぼかし→くっきりへ動き出す */
+			requestAnimationFrame(function () { loader.classList.add('is-out'); }); /* 光がゆっくり晴れる */
+			setTimeout(function () { if (loader.parentNode) loader.parentNode.removeChild(loader); }, 2600);
+		}
 		function finish(fast) {
 			if (finished) return; finished = true;
 			T.forEach(clearTimeout);
-			ls('mno_intro_seen', String(Date.now()));
-			loader.classList.add('is-out');
-			setTimeout(ready, fast ? 0 : 200);
-			setTimeout(function () { if (loader.parentNode) loader.parentNode.removeChild(loader); }, 1300);
+			if (!loader.classList.contains('t-full')) { cls('t-logo-out'); cls('t-full'); loader.style.setProperty('--r', Math.hypot(vw, vh) + 'px'); }
+			bloom();
+			/* 写真の読み込みを待つ（最大1.2秒）→ 光が満ちてから晴らす */
+			Promise.race([heroReady, new Promise(function (r) { setTimeout(r, 1200); })]).then(function () {
+				setTimeout(reveal, fast ? 650 : 1300);
+			});
 		}
 		loader.querySelector('.ld-skip').addEventListener('click', function () { finish(true); });
-		setTimeout(function () { finish(false); }, short ? 6000 : 13000); /* 何があっても必ず終わる */
+		setTimeout(function () { finish(false); }, 15000); /* 何があっても必ず終わる */
 
-		if (short) {
-			cls('t-beat');
-			at(700, function () { cls('t-open'); loader.style.setProperty('--r', (R * .9) + 'px'); try { v.play(); } catch (e) {} });
-			at(1100, function () { cls('t-logo'); fx.burst(vw / 2, vh * cy, 14, true); });
-			at(2300, function () { cls('t-logo-out'); cls('t-full'); loader.style.setProperty('--r', Math.hypot(vw, vh) + 'px'); });
-			at(3300, function () { finish(false); });
-			return;
-		}
 		/* 本編（約8秒） */
 		at(250, function () { cls('t-beat'); });
 		at(400, function () { line(0); });
@@ -148,7 +155,7 @@
 			loader.style.setProperty('--r', Math.hypot(vw, vh) + 'px');
 			fx.burst(vw / 2, vh * cy, 16, true);
 		});
-		at(8900, function () { finish(false); });
+		at(9000, function () { finish(false); });
 	}
 
 	if (reduce) { document.querySelectorAll('.mno-rise, .mno-pop, .mno-split, .mno-mask').forEach(function (el) { el.classList.add('is-in'); }); return; }
