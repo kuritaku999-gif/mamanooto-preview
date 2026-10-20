@@ -6,6 +6,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ままのおと。 &#8211; ママの「やってみたい」と「好き」がつながるオンラインコミュニティ</title>
 <meta name='robots' content='max-image-preview:large' />
+<script>(function(){try{if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;}catch(e){}document.documentElement.classList.add('mno-loading');})();</script>
+<link rel="preload" as="image" href="wp-content/themes/mamanooto/assets/img/felt/sheet.webp">
+<link rel="preload" as="image" href="wp-content/themes/mamanooto/assets/video/intro_land.jpg" media="(min-aspect-ratio: 1/1)">
+<link rel="preload" as="image" href="wp-content/themes/mamanooto/assets/video/intro_port.jpg" media="(max-aspect-ratio: 1/1)">
 <link rel='dns-prefetch' href='fonts.googleapis.com' />
 <link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="wp-json/oembed/1.0/embed/index.html" />
 <link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="wp-json/oembed/1.0/embed/index.html#038;format=xml" />
@@ -48,14 +52,34 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <link rel='stylesheet' id='mamanooto-style-css' href='wp-content/themes/mamanooto/style.css' media='all' />
 <link rel='stylesheet' id='mamanooto-photo-css' href='wp-content/themes/mamanooto/assets/css/photo.css' media='all' />
 <link rel='stylesheet' id='mamanooto-guide-css' href='wp-content/themes/mamanooto/assets/css/navigator.css' media='all' />
+<link rel='stylesheet' id='mamanooto-community-css' href='wp-content/themes/mamanooto/assets/css/community.css' media='all' />
+<link rel='stylesheet' id='mamanooto-motion-css' href='wp-content/themes/mamanooto/assets/css/motion.css' media='all' />
 <link rel="https://api.w.org/" href="wp-json/index.html" /><link rel="alternate" title="JSON" type="application/json" href="wp-json/wp/v2/pages/18/index.html" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc.php" />
 <meta name="generator" content="WordPress 7.1" />
 <link rel="canonical" href="index.html" />
 <link rel='shortlink' href='index.html' />
 <link rel="icon" href="wp-content/themes/mamanooto/assets/img/favicon_64.png">
 </head>
-<body class="home wp-singular page-template-default page page-id-18 wp-theme-mamanooto">
-
+<body class="home wp-singular page-template-default page page-id-18 wp-theme-mamanooto mno-has-loader">
+<div class="mno-loader" id="mnoLoader" aria-hidden="true" data-land="wp-content/themes/mamanooto/assets/video/intro_land.mp4" data-port="wp-content/themes/mamanooto/assets/video/intro_port.mp4" data-pland="wp-content/themes/mamanooto/assets/video/intro_land.jpg" data-pport="wp-content/themes/mamanooto/assets/video/intro_port.jpg">
+	<div class="ld-paper"></div>
+	<div class="ld-video"><video muted playsinline preload="auto"></video><div class="ld-veil"></div></div>
+	<div class="ld-window" aria-hidden="true"><span class="ld-halo"></span></div>
+	<div class="ld-beat"><i class="dot"></i><i class="ring r1"></i><i class="ring r2"></i><i class="ring r3"></i></div>
+	<canvas class="ld-felt"></canvas>
+	<div class="ld-text">
+		<p class="l l1">とくん、とくん。</p>
+		<p class="l l2">いちばん近くで聞いていた、<br class="sp">やさしい音。</p>
+		<p class="l l3">こんどは、ママが<br class="sp">ほっとする番。</p>
+	</div>
+	<div class="ld-logo">
+		<img src="wp-content/themes/mamanooto/assets/img/logo_circle.png" alt="">
+		<p class="name"><span>ま</span><span>ま</span><span>の</span><span>お</span><span>と</span><span>。</span></p>
+		<p class="en">mama no oto</p>
+	</div>
+	<button type="button" class="ld-skip">スキップ</button>
+</div>
+	
 <header class="mno-header">
 	<div class="mno-header-in">
 		<a class="mno-brand" href="index.html">
@@ -65,10 +89,10 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 		<nav class="mno-gnav">
 			<ul>
 								<li><a href="index.html"><img src="wp-content/themes/mamanooto/assets/img/icon_home.png" alt="">ホーム</a></li>
-								<li><a href="events/index.html"><img src="wp-content/themes/mamanooto/assets/img/icon_event.png" alt="">イベント</a></li>
+								<li><a href="calendar/index.html"><img src="wp-content/themes/mamanooto/assets/img/icon_event.png" alt="">講座カレンダー</a></li>
 								<li><a href="index.html#courses"><img src="wp-content/themes/mamanooto/assets/img/icon_community.png" alt="">コミュニティ</a></li>
 								<li><a href="column/index.html"><img src="wp-content/themes/mamanooto/assets/img/icon_column.png" alt="">コラム</a></li>
-								<li><a href="lecture/%e5%ad%90%e8%82%b2%e3%81%a6/index.html"><img src="wp-content/themes/mamanooto/assets/img/icon_kosodate.png" alt="">子育て</a></li>
+								<li><a href="teachers/index.html"><img src="wp-content/themes/mamanooto/assets/img/icon_kosodate.png" alt="">講師紹介</a></li>
 								<li><a href="join-teacher/index.html"><img src="wp-content/themes/mamanooto/assets/img/circle_tomomi.png" alt="">講師募集</a></li>
 								<li><a href="contact/index.html"><img src="wp-content/themes/mamanooto/assets/img/icon_contact.png" alt="">お問い合わせ</a></li>
 							</ul>
@@ -83,13 +107,14 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 	<div class="mno-drawer" id="mnoDrawer">
 		<ul>
 						<li><a href="index.html"><img src="wp-content/themes/mamanooto/assets/img/icon_home.png" alt="">ホーム</a></li>
-						<li><a href="events/index.html"><img src="wp-content/themes/mamanooto/assets/img/icon_event.png" alt="">イベント</a></li>
+						<li><a href="calendar/index.html"><img src="wp-content/themes/mamanooto/assets/img/icon_event.png" alt="">講座カレンダー</a></li>
 						<li><a href="index.html#courses"><img src="wp-content/themes/mamanooto/assets/img/icon_community.png" alt="">コミュニティ</a></li>
 						<li><a href="column/index.html"><img src="wp-content/themes/mamanooto/assets/img/icon_column.png" alt="">コラム</a></li>
-						<li><a href="lecture/%e5%ad%90%e8%82%b2%e3%81%a6/index.html"><img src="wp-content/themes/mamanooto/assets/img/icon_kosodate.png" alt="">子育て</a></li>
+						<li><a href="teachers/index.html"><img src="wp-content/themes/mamanooto/assets/img/icon_kosodate.png" alt="">講師紹介</a></li>
 						<li><a href="join-teacher/index.html"><img src="wp-content/themes/mamanooto/assets/img/circle_tomomi.png" alt="">講師募集</a></li>
 						<li><a href="contact/index.html"><img src="wp-content/themes/mamanooto/assets/img/icon_contact.png" alt="">お問い合わせ</a></li>
-									<li class="join"><a href="join/index.html"><img src="wp-content/themes/mamanooto/assets/img/sub_heart.png" alt="">会員登録</a></li>
+						<li class="line"><a href="https://lin.ee/8rPN1Fd" target="_blank" rel="noopener"><span class="line-ic">LINE</span>公式LINE</a></li>
+						<li class="join"><a href="join/index.html"><img src="wp-content/themes/mamanooto/assets/img/sub_heart.png" alt="">会員登録</a></li>
 									<li><a href="login/index.html"><img src="wp-content/themes/mamanooto/assets/img/circle_mama.png" alt="">ログイン</a></li>
 					</ul>
 	</div>
@@ -100,16 +125,16 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 	<div class="mnp-hero-photo">
 		<img src="wp-content/themes/mamanooto/assets/img/photos/hero.webp" alt="ママたちが赤ちゃんと一緒に笑い合っている様子" fetchpriority="high">
 	</div>
-	<div class="mnp-hero-in">
+	<div class="mno-mobile" aria-hidden="true"><span class="bar"></span><span class="str" style="--x:8%;--len:54px;--i:0"><img src="wp-content/themes/mamanooto/assets/img/felt/cloud.webp" alt=""></span><span class="str" style="--x:26%;--len:96px;--i:1"><img src="wp-content/themes/mamanooto/assets/img/felt/heart.webp" alt=""></span><span class="str" style="--x:44%;--len:70px;--i:2"><img src="wp-content/themes/mamanooto/assets/img/felt/star.webp" alt=""></span><span class="str" style="--x:62%;--len:110px;--i:3"><img src="wp-content/themes/mamanooto/assets/img/felt/moon.webp" alt=""></span><span class="str" style="--x:80%;--len:64px;--i:4"><img src="wp-content/themes/mamanooto/assets/img/felt/note.webp" alt=""></span></div>	<div class="mnp-hero-in">
 		<div class="mnp-hero-copy">
 						<div class="mnp-badge">
-								オープン記念の特別価格で募集中♪							</div>
-			<h1><span class="ln">正解なんて、なくていい。</span><span class="ln">変わっていく私を、</span><span class="ln">まるごと楽しもう。</span></h1>
+								<span class="pulse"></span>11月プレオープン｜事前登録を受付中です							</div>
+			<h1 class="mnp-hero-h1"><span class="ln">正解なんて、なくていい。</span><span class="ln">変わっていく私を、</span><span class="ln">まるごと楽しもう。</span></h1>
 			<p class="sub">ママの「やってみたい」と「好き」がつながる<br />
 オンラインコミュニティ「ままのおと。」</p>
 			<div class="mnp-hero-cta">
-				<a class="mno-btn big" href="join/index.html">会員登録（月々1,980円〜）</a>
-				<a class="mnp-btn-line" href="#about">ままのおと。をのぞいてみる</a>
+								<a class="mno-btn big" href="https://docs.google.com/forms/d/e/1FAIpQLScotynXASP8Cb9TeEp22SBuRHJXo34yMwo6DDTBeJj_0lRjbg/viewform" target="_blank" rel="noopener">事前登録する（無料）</a>
+								<a class="mnp-btn-line" href="#about">ままのおと。をのぞいてみる</a>
 			</div>
 			<p class="mnp-hero-teacher">講師として参加したい方は <a href="join-teacher/index.html">こちら</a></p>
 		</div>
@@ -196,7 +221,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 	</div>
 </section>
 
-<!-- 大切にすること（写真カード4枚） -->
+<div class="mno-wave " aria-hidden="true"><svg viewBox="0 0 1200 60" preserveAspectRatio="none"><path class="w1" d="M0 30 Q 75 6 150 30 T 300 30 T 450 30 T 600 30 T 750 30 T 900 30 T 1050 30 T 1200 30 T 1350 30 T 1500 30"/><path class="w2" d="M0 34 Q 100 50 200 34 T 400 34 T 600 34 T 800 34 T 1000 34 T 1200 34 T 1400 34 T 1600 34"/></svg><img class="note" src="wp-content/themes/mamanooto/assets/img/felt/note.webp" alt=""></div><!-- 大切にすること（写真カード4枚） -->
 <section class="mnp-section" id="values">
 	<div class="mnp-inner">
 		<div class="mnp-head mno-anim"><p class="mnp-eyebrow">Our Values</p><h2 class="mnp-h2">私たちが大切にすること</h2></div>
@@ -256,6 +281,49 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 				<div class="cap"><h3>リアルイベント</h3><p>親子で参加できる交流の場</p></div>
 			</div>
 					</div>
+	</div>
+</section>
+
+<div class="mno-wave pink" aria-hidden="true"><svg viewBox="0 0 1200 60" preserveAspectRatio="none"><path class="w1" d="M0 30 Q 75 6 150 30 T 300 30 T 450 30 T 600 30 T 750 30 T 900 30 T 1050 30 T 1200 30 T 1350 30 T 1500 30"/><path class="w2" d="M0 34 Q 100 50 200 34 T 400 34 T 600 34 T 800 34 T 1000 34 T 1200 34 T 1400 34 T 1600 34"/></svg><img class="note" src="wp-content/themes/mamanooto/assets/img/felt/note.webp" alt=""></div><!-- 会員になるとできること（v7） -->
+<section class="mnp-section mno-feat" id="features">
+	<div class="mnp-inner">
+		<div class="mnp-head mno-anim"><p class="mnp-eyebrow">Members</p><h2 class="mnp-h2 mno-split">会員になると、こんなことができます</h2>
+			<p class="mnp-lead">スマホひとつで、講座もおしゃべりも。いつでも、ここに帰ってこられます。</p></div>
+		<div class="mno-feat-grid">
+			<a class="mno-feat-card mno-rise" style="--d:0" href="calendar/index.html">
+				<div class="ui ui-cal" aria-hidden="true">
+					<div class="cal-h">11月</div>
+					<div class="cal-g"><span class="" style="--k:1">1</span><span class="" style="--k:2">2</span><span class="on" style="--k:3">3</span><span class="" style="--k:4">4</span><span class="" style="--k:5">5</span><span class="on" style="--k:6">6</span><span class="" style="--k:7">7</span><span class="" style="--k:8">8</span><span class="" style="--k:9">9</span><span class="on" style="--k:10">10</span><span class="" style="--k:11">11</span><span class="" style="--k:12">12</span><span class="on" style="--k:13">13</span><span class="" style="--k:14">14</span><span class="" style="--k:15">15</span><span class="" style="--k:16">16</span><span class="on" style="--k:17">17</span><span class="" style="--k:18">18</span><span class="" style="--k:19">19</span><span class="on" style="--k:20">20</span><span class="" style="--k:21">21</span></div>
+					<div class="cal-pop"><b>10:00</b> はじめての離乳食講座<em>Zoomで参加する</em></div>
+				</div>
+				<h3>毎日の講座をカレンダーで</h3>
+				<p>気になる講座をタップすると、くわしい内容とZoomの参加リンク。そのまま参加できます。</p>
+			</a>
+			<a class="mno-feat-card mno-rise" style="--d:1" href="rooms/index.html">
+				<div class="ui ui-chat" aria-hidden="true">
+					<p class="b b1"><em>はなママ</em>夜泣き、みんなどうしてる？</p>
+					<p class="b b2 me">うちもです〜！抱っこで散歩してます</p>
+					<p class="b b3"><em>講師 さやか</em>寝る前は明かりを少し暗くしてみてね🌙</p>
+				</div>
+				<h3>テーマ別の「お部屋」でおしゃべり</h3>
+				<p>0さい・1〜3さい・はたらくママ…。運営スタッフが見守る、安心のオープンなお部屋です。</p>
+			</a>
+			<a class="mno-feat-card mno-rise" style="--d:2" href="members/index.html#archive">
+				<div class="ui ui-arc" aria-hidden="true">
+					<div class="scr"><span class="play">▶</span><span class="bar"><i></i></span></div>
+					<div class="cnt"><span class="like">♡ <b data-count="24">24</b></span><span>👀 <b data-count="58">58</b>人</span></div>
+				</div>
+				<h3>見のがした講座はアーカイブで</h3>
+				<p>あとから動画で見られます。「よかった！」はいいねで講師に届きます。</p>
+			</a>
+			<a class="mno-feat-card mno-rise" style="--d:3" href="column/index.html">
+				<div class="ui ui-col" aria-hidden="true">
+					<span class="ln"></span><span class="ln s"></span><span class="ln"></span><span class="pen">✏️</span>
+				</div>
+				<h3>講師のコラム・受講のひとこと</h3>
+				<p>講師のコラムで講座の雰囲気がわかります。受けたあとは、ひとことの感想を講師へ。</p>
+			</a>
+		</div>
 	</div>
 </section>
 
@@ -350,35 +418,36 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 	<div class="mno-inner">
 		<div class="mnp-head mno-anim"><p class="mnp-eyebrow">Event</p><h2 class="mnp-h2">イベント・お知らせ</h2></div>
 				<div class="mno-posts mno-stagger">
-									<a class="mno-post-card mno-anim" href="events/%e3%83%9e%e3%83%9e%e3%81%ae%e3%81%9f%e3%82%81%e3%81%ae%e3%81%8a%e9%87%91%e3%81%ae%e8%a9%b1/index.html">
+									<a class="mno-post-card mno-anim" href="events/%e6%89%8b%e3%81%a5%e3%81%8f%e3%82%8a%e3%81%8a%e3%82%84%e3%81%a4%e3%81%ae%e4%bc%9a/index.html">
 				<div class="thumb">
 										<img class="cover" src="wp-content/themes/mamanooto/assets/img/photos/tea.webp" alt="" loading="lazy">
 									</div>
 				<div class="body">
-										<span class="date">10月18日（日）</span>
-															<span class="aud-badge">1,980円会員</span>
-										<h3>ママのためのお金の話</h3>
-										<div class="meta">場所：オンライン（Zoom）</div>
+										<span class="date">11月27日（金）</span>
+															<span class="aud-badge">会員限定</span>
+										<h3>手づくりおやつの会</h3>
+										<div class="meta">場所：竹ノ塚 コミュニティスペース</div>
 									</div>
 			</a>
-						<a class="mno-post-card mno-anim" href="events/%e3%81%af%e3%81%98%e3%82%81%e3%81%a6%e3%81%ae%e9%9b%a2%e4%b9%b3%e9%a3%9f%e8%ac%9b%e5%ba%a7/index.html">
+						<a class="mno-post-card mno-anim" href="events/%e5%ad%a3%e7%af%80%e3%81%ae%e3%82%b9%e3%82%ad%e3%83%b3%e3%82%b1%e3%82%a2%e3%81%a8%e3%83%a1%e3%82%a4%e3%82%af-2/index.html">
 				<div class="thumb">
 										<img class="cover" src="wp-content/themes/mamanooto/assets/img/photos/kids.webp" alt="" loading="lazy">
 									</div>
 				<div class="body">
-										<span class="date">10月11日（日）</span>
+										<span class="date">11月25日（水）</span>
 															<span class="aud-badge">会員限定</span>
-										<h3>はじめての離乳食講座</h3>
+										<h3>季節のスキンケアとメイク</h3>
 										<div class="meta">場所：オンライン（Zoom）</div>
 									</div>
 			</a>
-						<a class="mno-post-card mno-anim" href="events/0%e3%81%a1%e3%82%83%e3%82%93%e3%83%9e%e3%83%9e%e3%81%ae%e3%82%aa%e3%83%b3%e3%83%a9%e3%82%a4%e3%83%b3%e3%81%8a%e8%8c%b6%e4%bc%9a/index.html">
+						<a class="mno-post-card mno-anim" href="events/%e3%82%a4%e3%83%b3%e3%82%b9%e3%82%bf%e7%99%ba%e4%bf%a1%e3%81%af%e3%81%98%e3%82%81%e3%81%ae%e4%b8%80%e6%ad%a9/index.html">
 				<div class="thumb">
 										<img class="cover" src="wp-content/themes/mamanooto/assets/img/photos/nutrition.webp" alt="" loading="lazy">
 									</div>
 				<div class="body">
-										<span class="date">10月4日（日）</span>
-															<h3>0ちゃんママのオンラインお茶会</h3>
+										<span class="date">11月23日（月）</span>
+															<span class="aud-badge">会員限定</span>
+										<h3>インスタ発信はじめの一歩</h3>
 										<div class="meta">場所：オンライン（Zoom）</div>
 									</div>
 			</a>
@@ -387,7 +456,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 	</div>
 </section>
 
-<!-- 講師＝一緒につくる仲間 -->
+<div class="mno-wave " aria-hidden="true"><svg viewBox="0 0 1200 60" preserveAspectRatio="none"><path class="w1" d="M0 30 Q 75 6 150 30 T 300 30 T 450 30 T 600 30 T 750 30 T 900 30 T 1050 30 T 1200 30 T 1350 30 T 1500 30"/><path class="w2" d="M0 34 Q 100 50 200 34 T 400 34 T 600 34 T 800 34 T 1000 34 T 1200 34 T 1400 34 T 1600 34"/></svg><img class="note" src="wp-content/themes/mamanooto/assets/img/felt/note.webp" alt=""></div><!-- 講師＝一緒につくる仲間 -->
 <section class="mno-section olive" id="teachers">
 	<div class="mno-inner">
 		<div class="mnp-split mnp-teacher-invite mno-anim">
@@ -402,7 +471,52 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 				<p style="margin-top:20px"><a class="mno-btn olive" href="join-teacher/index.html">講師として一緒につくる</a></p>
 			</div>
 		</div>
-				<div class="mno-teachers mno-stagger" style="margin-top:48px">
+				<div class="mno-faces" aria-label="講師のみなさん">
+			<p class="mno-faces-lead mno-rise"><b data-count="20">20</b>名の講師が、ママのそばにいます</p>
+			<div class="mno-faces-track">
+								<a class="f" href="teachers/tetsumoto/index.html"><span class="av"><img width="300" height="300" src="wp-content/uploads/2026/09/teacher_tetsumoto-300x300.webp" class="attachment-medium size-medium wp-post-image" alt="" loading="lazy" decoding="async" /></span><span class="nm">鉄本 智美</span></a>
+								<a class="f" href="teachers/tsuchiya/index.html"><span class="av"><img width="300" height="300" src="wp-content/uploads/2026/09/teacher_tsuchiya-300x300.webp" class="attachment-medium size-medium wp-post-image" alt="" loading="lazy" decoding="async" /></span><span class="nm">土屋 佳代</span></a>
+								<a class="f" href="teachers/ikeda/index.html"><span class="av"><img width="300" height="300" src="wp-content/uploads/2026/09/teacher_ikeda-300x300.webp" class="attachment-medium size-medium wp-post-image" alt="" loading="lazy" decoding="async" /></span><span class="nm">池田 由恵</span></a>
+								<a class="f" href="teachers/kaneda/index.html"><span class="av"><img width="300" height="300" src="wp-content/uploads/2026/09/teacher_kaneda-300x300.webp" class="attachment-medium size-medium wp-post-image" alt="" loading="lazy" decoding="async" /></span><span class="nm">金田 久美子</span></a>
+								<a class="f" href="teachers/hirao/index.html"><span class="av"><img width="300" height="300" src="wp-content/uploads/2026/09/teacher_hirao-300x300.webp" class="attachment-medium size-medium wp-post-image" alt="" loading="lazy" decoding="async" /></span><span class="nm">平尾 愛子</span></a>
+								<a class="f" href="teachers/komatsu/index.html"><span class="av"><img width="300" height="300" src="wp-content/uploads/2026/09/teacher_komatsu-300x300.webp" class="attachment-medium size-medium wp-post-image" alt="" loading="lazy" decoding="async" /></span><span class="nm">小松 梨乃</span></a>
+								<a class="f" href="teachers/mizuki/index.html"><span class="av"><img width="300" height="300" src="wp-content/uploads/2026/09/teacher_mizuki-300x300.webp" class="attachment-medium size-medium wp-post-image" alt="" loading="lazy" decoding="async" /></span><span class="nm">水木 蓮</span></a>
+								<a class="f" href="teachers/yamaguchi/index.html"><span class="av"><img width="300" height="300" src="wp-content/uploads/2026/09/teacher_yamaguchi-300x300.webp" class="attachment-medium size-medium wp-post-image" alt="" loading="lazy" decoding="async" /></span><span class="nm">山口 直樹</span></a>
+								<a class="f" href="teachers/kaneko/index.html"><span class="av"><img width="300" height="300" src="wp-content/uploads/2026/09/teacher_kaneko-300x300.webp" class="attachment-medium size-medium wp-post-image" alt="" loading="lazy" decoding="async" /></span><span class="nm">金子 藍</span></a>
+								<a class="f" href="teachers/sato/index.html"><span class="av"><img width="300" height="300" src="wp-content/uploads/2026/09/teacher_sato-300x300.webp" class="attachment-medium size-medium wp-post-image" alt="" loading="lazy" decoding="async" /></span><span class="nm">佐藤 麻衣</span></a>
+								<a class="f" href="teachers/kashiwara/index.html"><span class="av"><img src="wp-content/themes/mamanooto/assets/img/circle_usako.png" alt="柏原 智美" loading="lazy"></span><span class="nm">柏原 智美</span></a>
+								<a class="f" href="teachers/ichikawa/index.html"><span class="av"><img width="300" height="300" src="wp-content/uploads/2026/09/teacher_ichikawa-300x300.webp" class="attachment-medium size-medium wp-post-image" alt="" loading="lazy" decoding="async" /></span><span class="nm">市川 亜有美</span></a>
+								<a class="f" href="teachers/makita/index.html"><span class="av"><img width="300" height="300" src="wp-content/uploads/2026/09/teacher_makita-300x300.webp" class="attachment-medium size-medium wp-post-image" alt="" loading="lazy" decoding="async" /></span><span class="nm">蒔田 尚子</span></a>
+								<a class="f" href="teachers/uchida/index.html"><span class="av"><img width="300" height="300" src="wp-content/uploads/2026/09/teacher_uchida-300x300.webp" class="attachment-medium size-medium wp-post-image" alt="" loading="lazy" decoding="async" /></span><span class="nm">内田 麻里絵</span></a>
+								<a class="f" href="teachers/aizawa/index.html"><span class="av"><img width="300" height="300" src="wp-content/uploads/2026/10/teacher_aizawa-300x300.webp" class="attachment-medium size-medium wp-post-image" alt="" loading="lazy" decoding="async" /></span><span class="nm">相沢 里奈</span></a>
+								<a class="f" href="teachers/nomura/index.html"><span class="av"><img width="300" height="300" src="wp-content/uploads/2026/10/teacher_nomura-300x300.webp" class="attachment-medium size-medium wp-post-image" alt="" loading="lazy" decoding="async" /></span><span class="nm">野村 麻友香</span></a>
+								<a class="f" href="teachers/kayaba/index.html"><span class="av"><img width="300" height="300" src="wp-content/uploads/2026/10/teacher_kayaba-300x300.webp" class="attachment-medium size-medium wp-post-image" alt="" loading="lazy" decoding="async" /></span><span class="nm">茅場 霧葉</span></a>
+								<a class="f" href="teachers/sayaka/index.html"><span class="av"><img width="300" height="300" src="wp-content/uploads/2026/10/teacher_sayaka-300x300.webp" class="attachment-medium size-medium wp-post-image" alt="" loading="lazy" decoding="async" /></span><span class="nm">さやか</span></a>
+								<a class="f" href="teachers/akane/index.html"><span class="av"><img width="300" height="300" src="wp-content/uploads/2026/10/teacher_akane-300x300.webp" class="attachment-medium size-medium wp-post-image" alt="" loading="lazy" decoding="async" /></span><span class="nm">あかね</span></a>
+								<a class="f" href="teachers/kamata/index.html"><span class="av"><img width="300" height="300" src="wp-content/uploads/2026/10/teacher_kamata-300x300.webp" class="attachment-medium size-medium wp-post-image" alt="" loading="lazy" decoding="async" /></span><span class="nm">鎌田 理子</span></a>
+								<a class="f" href="teachers/tetsumoto/index.html" aria-hidden="true" tabindex="-1"><span class="av"><img width="300" height="300" src="wp-content/uploads/2026/09/teacher_tetsumoto-300x300.webp" class="attachment-medium size-medium wp-post-image" alt="" loading="lazy" decoding="async" /></span><span class="nm">鉄本 智美</span></a>
+								<a class="f" href="teachers/tsuchiya/index.html" aria-hidden="true" tabindex="-1"><span class="av"><img width="300" height="300" src="wp-content/uploads/2026/09/teacher_tsuchiya-300x300.webp" class="attachment-medium size-medium wp-post-image" alt="" loading="lazy" decoding="async" /></span><span class="nm">土屋 佳代</span></a>
+								<a class="f" href="teachers/ikeda/index.html" aria-hidden="true" tabindex="-1"><span class="av"><img width="300" height="300" src="wp-content/uploads/2026/09/teacher_ikeda-300x300.webp" class="attachment-medium size-medium wp-post-image" alt="" loading="lazy" decoding="async" /></span><span class="nm">池田 由恵</span></a>
+								<a class="f" href="teachers/kaneda/index.html" aria-hidden="true" tabindex="-1"><span class="av"><img width="300" height="300" src="wp-content/uploads/2026/09/teacher_kaneda-300x300.webp" class="attachment-medium size-medium wp-post-image" alt="" loading="lazy" decoding="async" /></span><span class="nm">金田 久美子</span></a>
+								<a class="f" href="teachers/hirao/index.html" aria-hidden="true" tabindex="-1"><span class="av"><img width="300" height="300" src="wp-content/uploads/2026/09/teacher_hirao-300x300.webp" class="attachment-medium size-medium wp-post-image" alt="" loading="lazy" decoding="async" /></span><span class="nm">平尾 愛子</span></a>
+								<a class="f" href="teachers/komatsu/index.html" aria-hidden="true" tabindex="-1"><span class="av"><img width="300" height="300" src="wp-content/uploads/2026/09/teacher_komatsu-300x300.webp" class="attachment-medium size-medium wp-post-image" alt="" loading="lazy" decoding="async" /></span><span class="nm">小松 梨乃</span></a>
+								<a class="f" href="teachers/mizuki/index.html" aria-hidden="true" tabindex="-1"><span class="av"><img width="300" height="300" src="wp-content/uploads/2026/09/teacher_mizuki-300x300.webp" class="attachment-medium size-medium wp-post-image" alt="" loading="lazy" decoding="async" /></span><span class="nm">水木 蓮</span></a>
+								<a class="f" href="teachers/yamaguchi/index.html" aria-hidden="true" tabindex="-1"><span class="av"><img width="300" height="300" src="wp-content/uploads/2026/09/teacher_yamaguchi-300x300.webp" class="attachment-medium size-medium wp-post-image" alt="" loading="lazy" decoding="async" /></span><span class="nm">山口 直樹</span></a>
+								<a class="f" href="teachers/kaneko/index.html" aria-hidden="true" tabindex="-1"><span class="av"><img width="300" height="300" src="wp-content/uploads/2026/09/teacher_kaneko-300x300.webp" class="attachment-medium size-medium wp-post-image" alt="" loading="lazy" decoding="async" /></span><span class="nm">金子 藍</span></a>
+								<a class="f" href="teachers/sato/index.html" aria-hidden="true" tabindex="-1"><span class="av"><img width="300" height="300" src="wp-content/uploads/2026/09/teacher_sato-300x300.webp" class="attachment-medium size-medium wp-post-image" alt="" loading="lazy" decoding="async" /></span><span class="nm">佐藤 麻衣</span></a>
+								<a class="f" href="teachers/kashiwara/index.html" aria-hidden="true" tabindex="-1"><span class="av"><img src="wp-content/themes/mamanooto/assets/img/circle_usako.png" alt="柏原 智美" loading="lazy"></span><span class="nm">柏原 智美</span></a>
+								<a class="f" href="teachers/ichikawa/index.html" aria-hidden="true" tabindex="-1"><span class="av"><img width="300" height="300" src="wp-content/uploads/2026/09/teacher_ichikawa-300x300.webp" class="attachment-medium size-medium wp-post-image" alt="" loading="lazy" decoding="async" /></span><span class="nm">市川 亜有美</span></a>
+								<a class="f" href="teachers/makita/index.html" aria-hidden="true" tabindex="-1"><span class="av"><img width="300" height="300" src="wp-content/uploads/2026/09/teacher_makita-300x300.webp" class="attachment-medium size-medium wp-post-image" alt="" loading="lazy" decoding="async" /></span><span class="nm">蒔田 尚子</span></a>
+								<a class="f" href="teachers/uchida/index.html" aria-hidden="true" tabindex="-1"><span class="av"><img width="300" height="300" src="wp-content/uploads/2026/09/teacher_uchida-300x300.webp" class="attachment-medium size-medium wp-post-image" alt="" loading="lazy" decoding="async" /></span><span class="nm">内田 麻里絵</span></a>
+								<a class="f" href="teachers/aizawa/index.html" aria-hidden="true" tabindex="-1"><span class="av"><img width="300" height="300" src="wp-content/uploads/2026/10/teacher_aizawa-300x300.webp" class="attachment-medium size-medium wp-post-image" alt="" loading="lazy" decoding="async" /></span><span class="nm">相沢 里奈</span></a>
+								<a class="f" href="teachers/nomura/index.html" aria-hidden="true" tabindex="-1"><span class="av"><img width="300" height="300" src="wp-content/uploads/2026/10/teacher_nomura-300x300.webp" class="attachment-medium size-medium wp-post-image" alt="" loading="lazy" decoding="async" /></span><span class="nm">野村 麻友香</span></a>
+								<a class="f" href="teachers/kayaba/index.html" aria-hidden="true" tabindex="-1"><span class="av"><img width="300" height="300" src="wp-content/uploads/2026/10/teacher_kayaba-300x300.webp" class="attachment-medium size-medium wp-post-image" alt="" loading="lazy" decoding="async" /></span><span class="nm">茅場 霧葉</span></a>
+								<a class="f" href="teachers/sayaka/index.html" aria-hidden="true" tabindex="-1"><span class="av"><img width="300" height="300" src="wp-content/uploads/2026/10/teacher_sayaka-300x300.webp" class="attachment-medium size-medium wp-post-image" alt="" loading="lazy" decoding="async" /></span><span class="nm">さやか</span></a>
+								<a class="f" href="teachers/akane/index.html" aria-hidden="true" tabindex="-1"><span class="av"><img width="300" height="300" src="wp-content/uploads/2026/10/teacher_akane-300x300.webp" class="attachment-medium size-medium wp-post-image" alt="" loading="lazy" decoding="async" /></span><span class="nm">あかね</span></a>
+								<a class="f" href="teachers/kamata/index.html" aria-hidden="true" tabindex="-1"><span class="av"><img width="300" height="300" src="wp-content/uploads/2026/10/teacher_kamata-300x300.webp" class="attachment-medium size-medium wp-post-image" alt="" loading="lazy" decoding="async" /></span><span class="nm">鎌田 理子</span></a>
+							</div>
+		</div>
+						<div class="mno-teachers mno-stagger" style="margin-top:48px">
 						<a class="mno-teacher-card mno-anim" href="teachers/tetsumoto/index.html">
 				<div class="face"><img width="300" height="300" src="wp-content/uploads/2026/09/teacher_tetsumoto-300x300.webp" class="attachment-medium size-medium wp-post-image" alt="" loading="lazy" decoding="async" /></div>
 				<h3>鉄本 智美</h3>
@@ -459,7 +573,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 	</div>
 </section>
 
-<!-- これから目指す未来 -->
+<div class="mno-wave " aria-hidden="true"><svg viewBox="0 0 1200 60" preserveAspectRatio="none"><path class="w1" d="M0 30 Q 75 6 150 30 T 300 30 T 450 30 T 600 30 T 750 30 T 900 30 T 1050 30 T 1200 30 T 1350 30 T 1500 30"/><path class="w2" d="M0 34 Q 100 50 200 34 T 400 34 T 600 34 T 800 34 T 1000 34 T 1200 34 T 1400 34 T 1600 34"/></svg><img class="note" src="wp-content/themes/mamanooto/assets/img/felt/note.webp" alt=""></div><!-- これから目指す未来 -->
 <section class="mno-section alt" id="future">
 	<div class="mno-inner">
 		<div class="mnp-head mno-anim"><p class="mnp-eyebrow">Future</p><h2 class="mnp-h2">これから目指す未来</h2>
@@ -520,7 +634,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <section class="mno-section alt" id="column">
 	<div class="mno-inner">
 		<div class="mnp-head mno-anim"><p class="mnp-eyebrow">Column</p><h2 class="mnp-h2">ままのおと。コラム</h2></div>
-				<p class="mno-note" style="text-align:center">コラムを準備中です。おたのしみに♪</p>
+		<div class="mno-col-cards"><a class="mno-col-card mno-rise" href="%e4%bf%9d%e8%82%b2%e5%a3%ab%e3%81%8c%e8%a6%8b%e3%81%9f%e3%80%8c%e3%82%a4%e3%83%a4%e3%82%a4%e3%83%a4%e6%9c%9f%e3%80%8d%e3%81%ae%e3%81%bb%e3%82%93%e3%81%a8%e3%81%86%e3%81%ae%e6%b0%97%e6%8c%81%e3%81%a1/index.html"><div class="ph"><img width="768" height="512" src="wp-content/uploads/2026/10/col_kids-768x512.webp" class="attachment-medium_large size-medium_large wp-post-image" alt="" loading="lazy" decoding="async" /></div><div class="tx"><span class="date">2026.10.21</span><h3>保育士が見た「イヤイヤ期」のほんとうの気持ち</h3><span class="by"><span class="av"><img width="300" height="300" src="wp-content/uploads/2026/10/teacher_aizawa-300x300.webp" class="attachment-medium size-medium wp-post-image" alt="" loading="lazy" decoding="async" /></span>相沢 里奈</span></div></a><a class="mno-col-card mno-rise" href="%e7%94%a3%e5%be%8c%e3%81%ae%e8%ba%ab%e4%bd%93%e3%81%af%e3%80%8c%e3%82%86%e3%82%8b%e3%82%81%e3%82%8b%e3%80%8d%e3%81%8b%e3%82%89/index.html"><div class="ph"><img width="768" height="512" src="wp-content/uploads/2026/10/col_yoga-768x512.webp" class="attachment-medium_large size-medium_large wp-post-image" alt="" loading="lazy" decoding="async" /></div><div class="tx"><span class="date">2026.10.21</span><h3>産後の身体は「ゆるめる」から</h3><span class="by"><span class="av"><img width="300" height="300" src="wp-content/uploads/2026/10/teacher_nomura-300x300.webp" class="attachment-medium size-medium wp-post-image" alt="" loading="lazy" decoding="async" /></span>野村 麻友香</span></div></a><a class="mno-col-card mno-rise" href="%e9%9b%a2%e4%b9%b3%e9%a3%9f%e3%80%81%e3%81%8c%e3%82%93%e3%81%b0%e3%82%8a%e3%81%99%e3%81%8e%e3%81%aa%e3%81%8f%e3%81%a6%e5%a4%a7%e4%b8%88%e5%a4%ab/index.html"><div class="ph"><img width="768" height="512" src="wp-content/uploads/2026/10/col_nutrition-768x512.webp" class="attachment-medium_large size-medium_large wp-post-image" alt="" loading="lazy" decoding="async" /></div><div class="tx"><span class="date">2026.10.21</span><h3>離乳食、がんばりすぎなくて大丈夫</h3><span class="by"><span class="av"><img width="300" height="300" src="wp-content/uploads/2026/10/teacher_akane-300x300.webp" class="attachment-medium size-medium wp-post-image" alt="" loading="lazy" decoding="async" /></span>あかね</span></div></a></div>		<p style="text-align:center;margin-top:32px"><a class="mno-btn ghost" href="column/index.html">コラムをもっと見る</a></p>
 			</div>
 </section>
 
@@ -556,7 +670,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 	</div>
 </section>
 
-<!-- 3つの入口（写真カード） -->
+<div class="mno-wave " aria-hidden="true"><svg viewBox="0 0 1200 60" preserveAspectRatio="none"><path class="w1" d="M0 30 Q 75 6 150 30 T 300 30 T 450 30 T 600 30 T 750 30 T 900 30 T 1050 30 T 1200 30 T 1350 30 T 1500 30"/><path class="w2" d="M0 34 Q 100 50 200 34 T 400 34 T 600 34 T 800 34 T 1000 34 T 1200 34 T 1400 34 T 1600 34"/></svg><img class="note" src="wp-content/themes/mamanooto/assets/img/felt/note.webp" alt=""></div><!-- 3つの入口（写真カード） -->
 <section class="mno-section pink" id="gates">
 	<div class="mno-inner">
 		<div class="mnp-head mno-anim"><p class="mnp-eyebrow">Join us</p><h2 class="mnp-h2">あなたに合った入口から</h2></div>
@@ -631,7 +745,9 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 		<nav>
 			<ul>
 				<li><a href="index.html">ホーム</a></li>
+				<li><a href="calendar/index.html">講座カレンダー</a></li>
 				<li><a href="events/index.html">イベント</a></li>
+				<li><a href="rooms/index.html">みんなのお部屋</a></li>
 				<li><a href="column/index.html">コラム</a></li>
 				<li><a href="teachers/index.html">講師紹介</a></li>
 				<li><a href="rules/index.html">会員さんのルール</a></li>
@@ -643,6 +759,8 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 				<li><a href="contact/index.html">お問い合わせ</a></li>
 			</ul>
 		</nav>
+				<div class="mno-sns">
+			<a href="https://lin.ee/8rPN1Fd" target="_blank" rel="noopener">公式LINE</a>					</div>
 				<div class="mno-footer-legal">
 			<a href="company/index.html">運営会社</a>
 			<a href="tokushoho/index.html">特定商取引法に基づく表記</a>
@@ -688,5 +806,11 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </script>
 <script id="mamanooto-photo-js" src="wp-content/themes/mamanooto/assets/js/photo.js"></script>
 <script id="mamanooto-guide-js" src="wp-content/themes/mamanooto/assets/js/navigator.js"></script>
+<script id="mamanooto-motion-js-extra">
+var MNO = {"ajax":"https://kuritaku999-gif.github.io/mamanooto-preview/wp-admin/admin-ajax.php","nonce":"","img":"https://kuritaku999-gif.github.io/mamanooto-preview/wp-content/themes/mamanooto/assets/img/"};
+//# sourceURL=mamanooto-motion-js-extra
+</script>
+<script id="mamanooto-motion-js" src="wp-content/themes/mamanooto/assets/js/motion.js"></script>
+<script id="mamanooto-community-js" src="wp-content/themes/mamanooto/assets/js/community.js"></script>
 <div style="position:fixed;left:0;right:0;bottom:0;z-index:9999;background:#6b5a4e;color:#fff;font-size:12px;text-align:center;padding:6px 10px;opacity:.92">これは確認用のプレビューです（フォームの送信・ログインは本番公開後に使えます）</div><script>document.addEventListener("submit",function(e){e.preventDefault();alert("プレビューのため送信はできません。本番公開後に使えるようになります。");},true);</script></body>
 </html>

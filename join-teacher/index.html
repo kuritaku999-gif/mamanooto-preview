@@ -46,6 +46,8 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 
 <link rel='stylesheet' id='mamanooto-fonts-css' href='https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&#038;display=swap' media='all' />
 <link rel='stylesheet' id='mamanooto-style-css' href='../wp-content/themes/mamanooto/style.css' media='all' />
+<link rel='stylesheet' id='mamanooto-community-css' href='../wp-content/themes/mamanooto/assets/css/community.css' media='all' />
+<link rel='stylesheet' id='mamanooto-motion-css' href='../wp-content/themes/mamanooto/assets/css/motion.css' media='all' />
 <link rel="https://api.w.org/" href="../wp-json/index.html" /><link rel="alternate" title="JSON" type="application/json" href="../wp-json/wp/v2/pages/14/index.html" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc.php" />
 <meta name="generator" content="WordPress 7.1" />
 <link rel="canonical" href="index.html" />
@@ -63,10 +65,10 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 		<nav class="mno-gnav">
 			<ul>
 								<li><a href="../index.html"><img src="../wp-content/themes/mamanooto/assets/img/icon_home.png" alt="">ホーム</a></li>
-								<li><a href="../events/index.html"><img src="../wp-content/themes/mamanooto/assets/img/icon_event.png" alt="">イベント</a></li>
+								<li><a href="../calendar/index.html"><img src="../wp-content/themes/mamanooto/assets/img/icon_event.png" alt="">講座カレンダー</a></li>
 								<li><a href="../index.html#courses"><img src="../wp-content/themes/mamanooto/assets/img/icon_community.png" alt="">コミュニティ</a></li>
 								<li><a href="../column/index.html"><img src="../wp-content/themes/mamanooto/assets/img/icon_column.png" alt="">コラム</a></li>
-								<li><a href="../lecture/%e5%ad%90%e8%82%b2%e3%81%a6/index.html"><img src="../wp-content/themes/mamanooto/assets/img/icon_kosodate.png" alt="">子育て</a></li>
+								<li><a href="../teachers/index.html"><img src="../wp-content/themes/mamanooto/assets/img/icon_kosodate.png" alt="">講師紹介</a></li>
 								<li><a href="index.html"><img src="../wp-content/themes/mamanooto/assets/img/circle_tomomi.png" alt="">講師募集</a></li>
 								<li><a href="../contact/index.html"><img src="../wp-content/themes/mamanooto/assets/img/icon_contact.png" alt="">お問い合わせ</a></li>
 							</ul>
@@ -81,13 +83,14 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 	<div class="mno-drawer" id="mnoDrawer">
 		<ul>
 						<li><a href="../index.html"><img src="../wp-content/themes/mamanooto/assets/img/icon_home.png" alt="">ホーム</a></li>
-						<li><a href="../events/index.html"><img src="../wp-content/themes/mamanooto/assets/img/icon_event.png" alt="">イベント</a></li>
+						<li><a href="../calendar/index.html"><img src="../wp-content/themes/mamanooto/assets/img/icon_event.png" alt="">講座カレンダー</a></li>
 						<li><a href="../index.html#courses"><img src="../wp-content/themes/mamanooto/assets/img/icon_community.png" alt="">コミュニティ</a></li>
 						<li><a href="../column/index.html"><img src="../wp-content/themes/mamanooto/assets/img/icon_column.png" alt="">コラム</a></li>
-						<li><a href="../lecture/%e5%ad%90%e8%82%b2%e3%81%a6/index.html"><img src="../wp-content/themes/mamanooto/assets/img/icon_kosodate.png" alt="">子育て</a></li>
+						<li><a href="../teachers/index.html"><img src="../wp-content/themes/mamanooto/assets/img/icon_kosodate.png" alt="">講師紹介</a></li>
 						<li><a href="index.html"><img src="../wp-content/themes/mamanooto/assets/img/circle_tomomi.png" alt="">講師募集</a></li>
 						<li><a href="../contact/index.html"><img src="../wp-content/themes/mamanooto/assets/img/icon_contact.png" alt="">お問い合わせ</a></li>
-									<li class="join"><a href="../join/index.html"><img src="../wp-content/themes/mamanooto/assets/img/sub_heart.png" alt="">会員登録</a></li>
+						<li class="line"><a href="https://lin.ee/8rPN1Fd" target="_blank" rel="noopener"><span class="line-ic">LINE</span>公式LINE</a></li>
+						<li class="join"><a href="../join/index.html"><img src="../wp-content/themes/mamanooto/assets/img/sub_heart.png" alt="">会員登録</a></li>
 									<li><a href="../login/index.html"><img src="../wp-content/themes/mamanooto/assets/img/circle_mama.png" alt="">ログイン</a></li>
 					</ul>
 	</div>
@@ -169,13 +172,10 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 		</div>
 
 		<!-- 応募フォーム -->
-		<div style="margin-top:48px">
+		<div style="margin-top:48px" id="reward">
 		<div class="mno-sec-head"><img src="../wp-content/themes/mamanooto/assets/img/sub_note.png" alt="" class="sec-icon"><h2><span class="en">Reward</span>講師の活動と報酬</h2></div>		<p class="mno-lead-center mno-anim" style="margin-bottom:22px">学びが、誰かの幸せにつながる。講師の活動には、きちんと報酬をお渡しします。</p>
-		<div class="mno-reward-grid">
-			<div class="mno-card mno-anim"><h4>基本の講座・お茶会</h4><ul class="mno-reward"><li><span>講座（月1〜2回・1時間程度）</span><b>2,000円</b></li><li><span>お茶会ファシリテーター（1回）</span><b>1,000円</b></li><li><span>チケット講座（マンツーマン等・チケット1枚あたり）</span><b>350円</b></li></ul></div>
-			<div class="mno-card mno-anim"><h4>紹介・サポートの報酬</h4><ul class="mno-reward"><li><span>会員さんを紹介（ストック収入）</span><b>1,000円/月</b></li><li><span>講師さんを紹介（1回）</span><b>5,000円</b></li><li><span>コース変更の手続き（ベーシック→4,980円）</span><b>500円</b></li></ul><p class="small">※紹介された新規の会員さんにも「1,000円キャッシュバック or 750円チケット×3枚」の特典があります（会員2ヶ月目にお渡し）。</p></div>
-		</div>
-		<div class="mno-card mno-anim" style="margin-top:22px"><h4>講師のステップアップ</h4>
+				<div class="mno-card mno-anim mno-reward-locked"><img src="../wp-content/themes/mamanooto/assets/img/chars/usako_note.webp" alt=""><p>講座・お茶会・紹介などの活動に、それぞれ報酬があります。<br><b>くわしい金額は、講師登録のあと講師専用ページでご案内します。</b><br>面談のときにも、わかりやすくご説明しますね。</p></div>
+				<div class="mno-card mno-anim" style="margin-top:22px"><h4>講師のステップアップ</h4>
 		<ol class="mno-steps4"><li><b>STEP1</b>講師として経験を積む<small>講座1〜2回/月＋お茶会ファシリ</small></li><li><b>STEP2</b>マンツーマン・少人数講座へ<small>1対1・少人数・専門講座</small></li><li><b>STEP3</b>講師になりたい人を育てる<small>講師向けの講座を開設</small></li><li><b>STEP4</b>ままのおと認定講師へ<small>協会のような仕組みをつくり、今の現場の仕事を少しずつ手放すことも可能に</small></li></ol></div>
 		</div>
 
@@ -186,7 +186,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 			<form class="mno-form" method="post" action="#">
 				<input type="hidden" name="action" value="mno_contact">
 				<input type="hidden" name="mno_kind" value="講師応募">
-				<input type="hidden" id="mno_contact_nonce" name="mno_contact_nonce" value="d1b21ee4bb" /><input type="hidden" name="_wp_http_referer" value="/join-teacher/" />				<p class="hp-field"><label>この欄には入力しないでください<input type="text" name="mno_hp" tabindex="-1" autocomplete="off"></label></p>
+				<input type="hidden" id="mno_contact_nonce" name="mno_contact_nonce" value="be42783f85" /><input type="hidden" name="_wp_http_referer" value="/join-teacher/" />				<p class="hp-field"><label>この欄には入力しないでください<input type="text" name="mno_hp" tabindex="-1" autocomplete="off"></label></p>
 				<p>
 					<label for="mno_name">お名前</label>
 					<input type="text" id="mno_name" name="mno_name" required>
@@ -224,7 +224,9 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 		<nav>
 			<ul>
 				<li><a href="../index.html">ホーム</a></li>
+				<li><a href="../calendar/index.html">講座カレンダー</a></li>
 				<li><a href="../events/index.html">イベント</a></li>
+				<li><a href="../rooms/index.html">みんなのお部屋</a></li>
 				<li><a href="../column/index.html">コラム</a></li>
 				<li><a href="../teachers/index.html">講師紹介</a></li>
 				<li><a href="../rules/index.html">会員さんのルール</a></li>
@@ -236,6 +238,8 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 				<li><a href="../contact/index.html">お問い合わせ</a></li>
 			</ul>
 		</nav>
+				<div class="mno-sns">
+			<a href="https://lin.ee/8rPN1Fd" target="_blank" rel="noopener">公式LINE</a>					</div>
 				<div class="mno-footer-legal">
 			<a href="../company/index.html">運営会社</a>
 			<a href="../tokushoho/index.html">特定商取引法に基づく表記</a>
@@ -278,5 +282,11 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <script type="speculationrules">
 {"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/mamanooto/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
 </script>
+<script id="mamanooto-motion-js-extra">
+var MNO = {"ajax":"https://kuritaku999-gif.github.io/mamanooto-preview/wp-admin/admin-ajax.php","nonce":"","img":"https://kuritaku999-gif.github.io/mamanooto-preview/wp-content/themes/mamanooto/assets/img/"};
+//# sourceURL=mamanooto-motion-js-extra
+</script>
+<script id="mamanooto-motion-js" src="../wp-content/themes/mamanooto/assets/js/motion.js"></script>
+<script id="mamanooto-community-js" src="../wp-content/themes/mamanooto/assets/js/community.js"></script>
 <div style="position:fixed;left:0;right:0;bottom:0;z-index:9999;background:#6b5a4e;color:#fff;font-size:12px;text-align:center;padding:6px 10px;opacity:.92">これは確認用のプレビューです（フォームの送信・ログインは本番公開後に使えます）</div><script>document.addEventListener("submit",function(e){e.preventDefault();alert("プレビューのため送信はできません。本番公開後に使えるようになります。");},true);</script></body>
 </html>
