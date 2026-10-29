@@ -120,6 +120,7 @@
 		function bloom() { cls('t-bloom'); }
 		function reveal() {
 			ls('mno_intro_seen', String(Date.now()));
+			var d = new Date(); ls('mno_intro_day', d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate()); /* 1日1回だけ見せる */
 			ready();                                /* 光の下で、トップの写真がぼかし→くっきりへ動き出す */
 			requestAnimationFrame(function () { loader.classList.add('is-out'); }); /* 光がゆっくり晴れる */
 			setTimeout(function () { if (loader.parentNode) loader.parentNode.removeChild(loader); }, 2600);

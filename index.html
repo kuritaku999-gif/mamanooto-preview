@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ままのおと。 &#8211; ママの「やってみたい」と「好き」がつながるオンラインコミュニティ</title>
 <meta name='robots' content='max-image-preview:large' />
-<script>(function(){try{if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;}catch(e){}document.documentElement.classList.add('mno-loading');})();</script>
+<script>(function(){try{if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;var d=new Date(),k=d.getFullYear()+'-'+(d.getMonth()+1)+'-'+d.getDate();if(location.search.indexOf('intro=1')<0&&localStorage.getItem('mno_intro_day')===k)return;}catch(e){}document.documentElement.classList.add('mno-loading');})();</script>
 <link rel="preload" as="image" href="wp-content/themes/mamanooto/assets/img/felt/sheet.webp">
 <link rel="preload" as="image" href="wp-content/themes/mamanooto/assets/video/intro_land.jpg" media="(min-aspect-ratio: 1/1)">
 <link rel="preload" as="image" href="wp-content/themes/mamanooto/assets/video/intro_port.jpg" media="(max-aspect-ratio: 1/1)">
@@ -256,32 +256,24 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 	<div class="mnp-inner">
 		<div class="mnp-head mno-anim"><p class="mnp-eyebrow">What we do</p><h2 class="mnp-h2">ままのおと。でできること</h2>
 			<p class="mnp-lead">ただ「学ぶ場所」ではなく、「次の一歩が見つかる場所」へ。</p></div>
-		<div class="mnp-tiles mno-stagger">
-						<div class="mnp-tile mno-anim">
-				<img src="wp-content/themes/mamanooto/assets/img/photos/online.webp" alt="" loading="lazy">
-				<div class="cap"><h3>オンライン講座</h3><p>おうちから、子どもと一緒に参加OK</p></div>
-			</div>
-						<div class="mnp-tile mno-anim">
-				<img src="wp-content/themes/mamanooto/assets/img/photos/tea.webp" alt="" loading="lazy">
-				<div class="cap"><h3>オンラインお茶会</h3><p>ママ同士で、ゆるっとおしゃべり</p></div>
-			</div>
-						<div class="mnp-tile mno-anim">
-				<img src="wp-content/themes/mamanooto/assets/img/photos/nutrition.webp" alt="" loading="lazy">
-				<div class="cap"><h3>専門家から学ぶ</h3><p>栄養・子育て・こころ・お金のこと</p></div>
-			</div>
-						<div class="mnp-tile mno-anim">
-				<img src="wp-content/themes/mamanooto/assets/img/photos/yoga.webp" alt="" loading="lazy">
-				<div class="cap"><h3>体験・趣味</h3><p>ヨガ、美容、手づくり、おでかけ</p></div>
-			</div>
-						<div class="mnp-tile mno-anim">
-				<img src="wp-content/themes/mamanooto/assets/img/photos/teacher.webp" alt="" loading="lazy">
-				<div class="cap"><h3>「好き」を仕事に</h3><p>得意を活かして講師として活躍</p></div>
-			</div>
-						<div class="mnp-tile mno-anim">
-				<img src="wp-content/themes/mamanooto/assets/img/photos/kids.webp" alt="" loading="lazy">
-				<div class="cap"><h3>リアルイベント</h3><p>親子で参加できる交流の場</p></div>
-			</div>
-					</div>
+				<div class="mno-cando mno-anim">
+			<div class="mno-cando-photo" aria-hidden="true">
+								<img class="on" src="wp-content/themes/mamanooto/assets/img/photos/online.webp" alt="" loading="lazy">
+								<img class="" src="wp-content/themes/mamanooto/assets/img/photos/tea.webp" alt="" loading="lazy">
+								<img class="" src="wp-content/themes/mamanooto/assets/img/photos/nutrition.webp" alt="" loading="lazy">
+								<img class="" src="wp-content/themes/mamanooto/assets/img/photos/yoga.webp" alt="" loading="lazy">
+								<img class="" src="wp-content/themes/mamanooto/assets/img/photos/teacher.webp" alt="" loading="lazy">
+								<img class="" src="wp-content/themes/mamanooto/assets/img/photos/kids.webp" alt="" loading="lazy">
+							</div>
+			<ol class="mno-cando-list">
+								<li><button type="button" data-i="0" class="on"><span class="no">01</span><span class="tx"><b>オンライン講座</b><small>おうちから、子どもと一緒に参加OK</small></span></button></li>
+								<li><button type="button" data-i="1" class=""><span class="no">02</span><span class="tx"><b>オンラインお茶会</b><small>ママ同士で、ゆるっとおしゃべり</small></span></button></li>
+								<li><button type="button" data-i="2" class=""><span class="no">03</span><span class="tx"><b>専門家から学ぶ</b><small>栄養・子育て・こころ・お金のこと</small></span></button></li>
+								<li><button type="button" data-i="3" class=""><span class="no">04</span><span class="tx"><b>体験・趣味</b><small>ヨガ、美容、手づくり、おでかけ</small></span></button></li>
+								<li><button type="button" data-i="4" class=""><span class="no">05</span><span class="tx"><b>「好き」を仕事に</b><small>得意を活かして講師として活躍</small></span></button></li>
+								<li><button type="button" data-i="5" class=""><span class="no">06</span><span class="tx"><b>リアルイベント</b><small>親子で参加できる交流の場</small></span></button></li>
+							</ol>
+		</div>
 	</div>
 </section>
 
@@ -338,12 +330,15 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 				<div class="mnp-course-photo"><img src="wp-content/themes/mamanooto/assets/img/photos/tea.webp" alt="" loading="lazy"></div>
 				<span class="ribbon">まずは気軽に</span>
 				<h3>ベーシックコース</h3>
-				<div class="price">月々 1,980<small>円（税込）</small></div>
-				<p class="limit">会員〜100名の特別価格。入会時の価格がずっと続きます</p>
+								<p class="mno-price-was"><span>会員201名〜は</span><s>月々2,980円</s></p>
+				<div class="price"><em class="now">今だけ</em>月々 1,980<small>円（税込）</small></div>
+				<p class="mno-price-badge">先着100名さま限定｜毎月1,000円おトク</p>
+				<p class="limit">入会したときの価格が、ずっと続きます</p>
 				<ul class="mno-check-list">
-					<li>オンライン講座（月1〜2回）</li>
-					<li>オンラインお茶会・ママ同士の交流</li>
-					<li>講師とのつながり・相談</li>
+					<li>毎月の講座に、カレンダーからZoomで参加</li>
+					<li>見のがした講座はアーカイブ動画で</li>
+					<li>オンラインお茶会・テーマ別の「お部屋」でおしゃべり</li>
+					<li>講師のコラム・講師とのつながり</li>
 					<li>会員限定イベント</li>
 				</ul>
 				<div class="btns">
@@ -368,6 +363,20 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 					<a class="mno-textlink" href="course-4980/index.html">コースの詳細を見る →</a>
 				</div>
 			</div>
+		</div>
+		<div class="mno-compare mno-anim">
+			<h3><span>＋3,000円で、</span><br class="sp">ここまでできるようになります</h3>
+			<table>
+				<thead><tr><th></th><th>ベーシック<small>月々1,980円</small></th><th class="pr">稼ぐ・深く学ぶ<small>月々4,980円</small></th></tr></thead>
+				<tbody>
+					<tr><th>毎月の講座（Zoom）</th><td>○</td><td>○</td></tr>
+					<tr><th>お茶会・お部屋でおしゃべり</th><td>○</td><td>○</td></tr>
+					<tr><th>会員限定イベント</th><td>○</td><td>○</td></tr>
+					<tr><th>アーカイブ動画</th><td>○</td><td class="up">見放題</td></tr>
+					<tr><th>もっと深く学べる専門講座</th><td class="no">―</td><td class="up">○</td></tr>
+					<tr><th>「好き」を仕事にする・稼ぐ講座<small>お仕事紹介につながる勉強会・説明会</small></th><td class="no">―</td><td class="up">○</td></tr>
+				</tbody>
+			</table>
 		</div>
 		<p class="mno-price-foot mno-anim">チケット（マンツーマン・特別講座用）は 2枚 1,500円〜。料金のくわしい内容は <a href="join/index.html">会員登録ページ</a> と <a href="tokushoho/index.html">特定商取引法に基づく表記</a> をご覧ください。</p>
 		<div class="mno-flow-wrap"><div class="mno-sec-head"><img src="wp-content/themes/mamanooto/assets/img/sub_clover.png" alt="" class="sec-icon"><h2><span class="en">Flow</span>参加までの流れ</h2></div><ol class="mno-flow mno-stagger"><li class="mno-anim"><span class="num">STEP 1</span><img src="wp-content/themes/mamanooto/assets/img/circle_mama.png" alt="" loading="lazy"><b>フォームから申し込む</b><p>コースを選んで、お名前とメールアドレスを送るだけ。</p></li><li class="mno-anim"><span class="num">STEP 2</span><img src="wp-content/themes/mamanooto/assets/img/sub_heart.png" alt="" loading="lazy"><b>お支払い</b><p>運営からのメールで、クレジットカードのお支払い方法をご案内します。</p></li><li class="mno-anim"><span class="num">STEP 3</span><img src="wp-content/themes/mamanooto/assets/img/icon_contact.png" alt="" loading="lazy"><b>ログイン情報が届く</b><p>マイページのログイン情報と、はじめてガイドをお送りします。</p></li><li class="mno-anim"><span class="num">STEP 4</span><img src="wp-content/themes/mamanooto/assets/img/circle_oto.png" alt="" loading="lazy"><b>講座・お茶会に参加</b><p>カレンダーから気になる講座へ。Zoomで気軽に参加できます。</p></li></ol></div>	</div>
@@ -548,6 +557,42 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 								<span class="charge">子育て・働く</span>
 												<p class="strength">Instagram運用、リール動画の企画・撮影・編集、Canvaでの画像作成、子連れおでかけ情報</p>
 							</a>
+						<a class="mno-teacher-card mno-anim" href="teachers/mizuki/index.html">
+				<div class="face"><img width="300" height="300" src="wp-content/uploads/2026/09/teacher_mizuki-300x300.webp" class="attachment-medium size-medium wp-post-image" alt="" loading="lazy" decoding="async" /></div>
+				<h3>水木 蓮</h3>
+								<span class="charge">金融</span>
+												<p class="strength">ライフプランニングを通じた将来シミュレーション、保険提案、資産運用の相談</p>
+							</a>
+						<a class="mno-teacher-card mno-anim" href="teachers/yamaguchi/index.html">
+				<div class="face"><img width="300" height="300" src="wp-content/uploads/2026/09/teacher_yamaguchi-300x300.webp" class="attachment-medium size-medium wp-post-image" alt="" loading="lazy" decoding="async" /></div>
+				<h3>山口 直樹</h3>
+								<span class="charge">こころ</span>
+												<p class="strength">人の心に火を点ける、わかりやすい表現力、好奇心</p>
+							</a>
+						<a class="mno-teacher-card mno-anim" href="teachers/kaneko/index.html">
+				<div class="face"><img width="300" height="300" src="wp-content/uploads/2026/09/teacher_kaneko-300x300.webp" class="attachment-medium size-medium wp-post-image" alt="" loading="lazy" decoding="async" /></div>
+				<h3>金子 藍</h3>
+								<span class="charge">美容</span>
+												<p class="strength">フェイシャルマッサージ、スキンケア・メイク・ヘアセットのアドバイス、似合わせコーディネート</p>
+							</a>
+						<a class="mno-teacher-card mno-anim" href="teachers/sato/index.html">
+				<div class="face"><img width="300" height="300" src="wp-content/uploads/2026/09/teacher_sato-300x300.webp" class="attachment-medium size-medium wp-post-image" alt="" loading="lazy" decoding="async" /></div>
+				<h3>佐藤 麻衣</h3>
+								<span class="charge">こころ</span>
+												<p class="strength">家族・恋愛・友達関係の相談、寄り添いの傾聴、脳内整理</p>
+							</a>
+						<a class="mno-teacher-card mno-anim" href="teachers/makita/index.html">
+				<div class="face"><img width="300" height="300" src="wp-content/uploads/2026/09/teacher_makita-300x300.webp" class="attachment-medium size-medium wp-post-image" alt="" loading="lazy" decoding="async" /></div>
+				<h3>蒔田 尚子</h3>
+								<span class="charge">子育て・こころ</span>
+												<p class="strength">0歳〜18歳までの子どもと、子に関わる大人の相談</p>
+							</a>
+						<a class="mno-teacher-card mno-anim" href="teachers/uchida/index.html">
+				<div class="face"><img width="300" height="300" src="wp-content/uploads/2026/09/teacher_uchida-300x300.webp" class="attachment-medium size-medium wp-post-image" alt="" loading="lazy" decoding="async" /></div>
+				<h3>内田 麻里絵</h3>
+								<span class="charge">子育て・こころ</span>
+												<p class="strength">0歳からの親子のふれあいを通した、子どもの心と身体の土台づくり</p>
+							</a>
 					</div>
 		<p style="text-align:center;margin-top:32px"><a class="mno-btn ghost" href="teachers/index.html">講師をもっと見る</a></p>
 			</div>
@@ -625,18 +670,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 	</div>
 </section>
 
-	<section class="mno-section" id="sponsors">
-		<div class="mno-inner">
-			<div class="mnp-head mno-anim"><p class="mnp-eyebrow">Sponsors</p><h2 class="mnp-h2">協賛企業</h2>
-				<p class="mnp-lead">ままのおと。の活動を応援してくださっている企業のみなさまです。</p></div>
-			<ul class="mno-sponsors mno-stagger">
-								<li class="mno-anim"><span class="nm">協賛企業さま①（ロゴ準備中）</span></li>
-								<li class="mno-anim"><span class="nm">協賛企業さま②（ロゴ準備中）</span></li>
-								<li class="mno-anim"><span class="nm">協賛企業さま③（ロゴ準備中）</span></li>
-							</ul>
-		</div>
-	</section>
-	
+
 <!-- イベントの様子 -->
 <section class="mno-section" id="report">
 	<div class="mno-inner">
@@ -661,28 +695,6 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 	<div class="mno-inner" style="max-width:860px">
 		<div class="mnp-head mno-anim"><p class="mnp-eyebrow">FAQ</p><h2 class="mnp-h2">よくある質問</h2></div>
 		<div class="mno-faq"><details class="mno-anim"><summary><span class="q">Q</span>どんな人が参加していますか？</summary><div class="a"><span class="q">A</span><p>0歳〜小学生くらいのお子さんを育てているママが中心です。「子育ての話をしたい」「自分の好きなことを見つけたい」「何か始めてみたい」など、参加のきっかけはさまざま。はじめての方も安心してご参加ください。</p></div></details><details class="mno-anim"><summary><span class="q">Q</span>オンラインでの参加は、どうすればいいですか？</summary><div class="a"><span class="q">A</span><p>講座やお茶会はビデオ会議ツール「Zoom」で行います。スマートフォンがあれば参加できます。顔出し・発言は自由なので、聞くだけの参加でも大丈夫です。</p></div></details><details class="mno-anim"><summary><span class="q">Q</span>料金はいくらですか？</summary><div class="a"><span class="q">A</span><p>ベーシックコースは、いま入会すると月々1,980円（税込）です。会員数に応じて入会時の料金が上がっていきますが、入会したときの料金のままずっと続けられます。</p></div></details><details class="mno-anim"><summary><span class="q">Q</span>お支払い方法は？</summary><div class="a"><span class="q">A</span><p>クレジットカード決済（VISA／Mastercard／JCB／American Express／Diners Club）でお支払いいただけます。月額コースは毎月自動で決済されます。</p></div></details><details class="mno-anim"><summary><span class="q">Q</span>解約はいつでもできますか？</summary><div class="a"><span class="q">A</span><p>はい、いつでも解約できます。次回決済日の前日までに、お問い合わせフォームまたはメールでお知らせください。違約金はかかりません。お支払い済みの期間の終わりまでご利用いただけます。</p></div></details><details class="mno-anim"><summary><span class="q">Q</span>チケットは何に使えますか？</summary><div class="a"><span class="q">A</span><p>講師のマンツーマン講座や特別講座に使えます。有効期限はご購入日から6ヶ月間です。</p></div></details><details class="mno-anim"><summary><span class="q">Q</span>講座に参加できなかったときは？</summary><div class="a"><span class="q">A</span><p>講座によってはアーカイブ動画を会員ページで公開します。忙しいママでも、自分のペースで学べます。</p></div></details></div>		<p style="text-align:center;margin-top:28px"><a class="mno-btn ghost" href="contact/index.html">ほかの質問はこちらから</a></p>
-	</div>
-</section>
-
-<!-- 運営会社 -->
-<section class="mno-section" id="company">
-	<div class="mno-inner">
-		<div class="mnp-head mno-anim"><p class="mnp-eyebrow">Company</p><h2 class="mnp-h2">運営会社</h2></div>
-		<div class="mno-company-grid">
-			<div class="mno-company-story mno-anim">
-				<p class="co">株式会社Coconeiro</p>
-				<p class="philo">一人ひとりが本来の力を発揮し、<br>自分らしく生きることで、<br>人生の可能性をひらく。</p>
-				<p>社名の Coconeiro（ここねいろ）には、「今ここ」「個々」「心の音」という想いを込めています。一人ひとり違う音色が響き合うことで、一人では生み出せない可能性が生まれる——。その理念を、ママのコミュニティという形にしたのが「ままのおと。」です。</p>
-				<div class="mean"><span><b>Coco</b>今ここ・個々・心</span><span><b>neiro</b>音色・心の音</span></div>
-			</div>
-			<div class="mno-company-info mno-anim">
-				<dl class="mno-dl"><div class="row"><dt>会社名</dt><dd>株式会社Coconeiro</dd></div><div class="row"><dt>代表者</dt><dd>代表取締役　鉄本 智美</dd></div><div class="row"><dt>所在地</dt><dd>〒342-0045<br>埼玉県吉川市木売2-19-2 2F シェアサロンLien</dd></div><div class="row"><dt>設立</dt><dd>2026年</dd></div><div class="row"><dt>事業内容</dt><dd>コミュニティ事業（ママのコミュニティ「ままのおと。」の運営）<br />
-講座・イベントの企画運営<br />
-講師・人材育成<br />
-女性のライフ・キャリア支援<br />
-ウェルネス・健康支援</dd></div><div class="row"><dt>運営サービス</dt><dd>ママのオンラインコミュニティ「ままのおと。」</dd></div><div class="row"><dt>電話番号</dt><dd><a href="tel:08011714095">080-1171-4095</a><br><small>平日 10:00〜17:00（土日祝・年末年始を除く）</small></dd></div><div class="row"><dt>メール</dt><dd><a href="mailto:tomomi@coconeiro.com">tomomi@coconeiro.com</a></dd></div><div class="row"><dt>会社サイト</dt><dd><a href="https://coconeiro.com" target="_blank" rel="noopener">coconeiro.com</a></dd></div></dl>				<p class="links"><a href="company/index.html">運営会社について</a><a href="tokushoho/index.html">特定商取引法に基づく表記</a></p>
-			</div>
-		</div>
 	</div>
 </section>
 
