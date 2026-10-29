@@ -252,3 +252,7 @@
 	.mno-course-card .price small { font-size: 12px; }
 	.mno-course-card .price .now { font-size: 11px; padding: 2px 8px; margin-right: 4px; }
 }
+
+/* v7.3 稼ぐ・深く学ぶコースの Coming Soon（チラ見せ） */
+.mno-course-card .price.soon, .mno-price-card .price.soon { font-size: 30px; letter-spacing: .06em; font-style: italic; opacity: .85; }
+.mno-check-list li.soon { filter: blur(4px); opacity: .7; user-select: none; pointer-events: none; }
