@@ -247,3 +247,31 @@ html.mno-modal-open { overflow: hidden; }
 @media (max-width: 560px) { .mno-reward-locked { flex-direction: column; text-align: center; } }
 .mno-nick-form { grid-template-columns: 1fr auto; align-items: end; background: #fff; padding: 18px; border-radius: 22px; box-shadow: var(--shadow-soft); }
 @media (max-width: 560px) { .mno-nick-form { grid-template-columns: 1fr; } }
+
+/* ---------- v7.1 コラムの写真・イベントの様子・協賛企業 ---------- */
+.mno-gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 10px; margin: 24px 0; }
+.mno-gallery a { display: block; aspect-ratio: 1 / 1; overflow: hidden; border-radius: 16px; }
+.mno-gallery img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s; }
+.mno-gallery a:hover img { transform: scale(1.04); }
+.mno-sign { text-align: right; font-weight: 700; margin-top: 28px; }
+.mno-report-tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 340px)); justify-content: center; gap: 14px; }
+.mno-report-tile { position: relative; display: block; border-radius: 22px; overflow: hidden; color: #fff; box-shadow: var(--shadow-soft); }
+.mno-report-tile .ph { aspect-ratio: 4 / 3; }
+.mno-report-tile .ph img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s; }
+.mno-report-tile:hover .ph img { transform: scale(1.05); }
+.mno-report-tile .tx { position: absolute; left: 0; right: 0; bottom: 0; padding: 28px 16px 14px; background: linear-gradient(transparent, rgba(60, 40, 30, .62)); }
+.mno-report-tile .date { font-size: .78rem; opacity: .9; }
+.mno-report-tile h3 { margin: 2px 0 0; font-size: 1rem; line-height: 1.5; color: #fff; }
+.mno-sponsors { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; }
+.mno-sponsors li { width: 200px; height: 96px; background: #fff; border-radius: 18px; box-shadow: var(--shadow-soft); display: flex; align-items: center; justify-content: center; padding: 14px 20px; }
+.mno-sponsors li a { display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; }
+.mno-sponsors img { max-width: 100%; max-height: 64px; width: auto; height: auto; object-fit: contain; }
+.mno-sponsors .nm { font-weight: 700; color: var(--text); text-align: center; line-height: 1.4; }
+@media (max-width: 760px) {
+	.mno-report-tiles { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+	.mno-gallery { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+	.mno-report-tile h3 { font-size: .88rem; }
+	.mno-sponsors li { width: calc(50% - 8px); height: 80px; padding: 10px 12px; }
+	.mno-sponsors img { max-height: 52px; }
+}
+.mno-entry-ph img { width: 100%; max-height: 460px; object-fit: cover; object-position: center 25%; }
